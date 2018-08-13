@@ -104,9 +104,33 @@ Words with unrelated meanings will not share translations into another language,
 When the SMM is applied to an initial lexeme, three types of word sense relationships can arise: “related word senses”, “unrelated word senses” and “mutually unrelated word senses” (\citealt{langemets_translations_2005}: 32). The first step that needs to be taken, is to isolate the mutually unrelated senses of each word (Ibid.) for which the resulting lexemes of the first T-image are used. I will try to illustrate the difference between related word senses, unrelated word senses and mutually unrelated word senses with the example of the Dutch word \textit{bank} (\figref{fig:key:9}), which can be translated in French as \textit{institution} \textit{financière} [financial institution], \textit{banque} [financial institution], \textit{banc} [seat] and \textit{fauteuil} [armchair]. This distinction between the different types of senses presented in the following sub-sections is based on Dyvik’s procedure for word sense isolation.
 
 
-\begin{figure}
+\begin{figure}\footnotesize
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img8.png}
-\caption{\label{fig:key:9}  Example of the (ficticious) SMM of \textit{bank}}
+\begin{tikzpicture}
+    \matrix (SMM) [draw,matrix of nodes,nodes in empty cells,row 3 column 5/.style=red,row sep=1cm,column sep=2em] {
+        \phantom{institution financière} & & bank & & & \\
+        institution financière & banque & & banc & & fauteil\\
+        financiële instelling & bank & sofa & zetel & [color=red]school & leunstoel\\
+    };
+    \foreach \i in {1,2,4,6} \draw[->] (SMM-1-3.south) -- (SMM-2-\i);
+    \path[->] (SMM-2-1.south) edge (SMM-3-1)
+                              edge (SMM-3-2);
+    \path[->] (SMM-2-2.south) edge (SMM-3-1)
+                              edge (SMM-3-2);                              
+    \path[->] (SMM-2-4.south) edge (SMM-3-2)
+                              edge (SMM-3-3)
+                              edge (SMM-3-4)
+                              edge [color=red] (SMM-3-5)
+                              edge (SMM-3-6);
+    \path[->] (SMM-2-6.south) edge (SMM-3-2)
+                              edge (SMM-3-3)
+                              edge (SMM-3-4)
+                              edge (SMM-3-6);
+    \node[left=.5cm of SMM-1-1.west,] {\scshape initial lexeme};
+    \node[left=.5cm of SMM-2-1.west,] {\scshape first t-image};
+    \node[left=.5cm of SMM-3-1.west,] {\scshape inverse t-image};
+\end{tikzpicture}
+\caption{\label{fig:key:9}Example of the (ficticious) SMM of \textit{bank}}
 \end{figure}
 
 \subsubsection{\label{sec:3.4.3.1}  Unrelated word senses}
@@ -116,7 +140,20 @@ The set of translations back into Dutch (the inverse T-image) of \textit{banque}
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img9.png}
-\caption{\label{fig:key:10}  \textit{Inverse} \textit{T-image} \textit{of} \textit{banque}}
+\begin{tikzpicture}
+    \matrix (SMM) [draw,matrix of nodes,nodes in empty cells,row sep=1cm,column sep=2em] {
+        & & bank\\
+        & banque &\\
+        bank & financiële instelling &\\
+    };
+    \draw[->] (SMM-1-3) -- (SMM-2-2);
+    \draw[->] (SMM-2-2) -- (SMM-3-1);
+    \draw[->] (SMM-2-2) -- (SMM-3-2);
+    \node[left=1cm of SMM-1-1.center,] {\scshape initial lexeme a};
+    \node[left=1cm of SMM-2-1.center,] {\scshape first t-image};
+    \node[left=1cm of SMM-3-1.center,] {\scshape inverse t-image};
+\end{tikzpicture}
+\caption{\label{fig:key:10}{Inverse} {T-image} {of} {banque}}
 \end{figure}
 
 
@@ -125,7 +162,19 @@ The set of translations back into Dutch (the inverse T-image) of \textit{banque}
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img10.png}
-\caption{\label{fig:key:11}  Inverse T-image of \textit{banc}}
+\begin{tikzpicture}
+    \matrix (SMM) [draw,matrix of nodes,nodes in empty cells,row sep=1cm,column sep=2em] {
+        & bank & &\\
+        & banc & &\\
+        bank & sofa & zetel & leunstoel\\
+    };
+    \draw[->] (SMM-1-2) -- (SMM-2-2);
+    \foreach \i in {1,2,3,4} \draw[->] (SMM-2-2) -- (SMM-3-\i);
+    \node[left=1cm of SMM-1-1.center,] {\scshape initial lexeme a};
+    \node[left=1cm of SMM-2-1.center,] {\scshape first t-image};
+    \node[left=1cm of SMM-3-1.center,] {\scshape inverse t-image};
+\end{tikzpicture}
+\caption{\label{fig:key:11}Inverse T-image of \textit{banc}}
 \end{figure}
 
 
@@ -136,7 +185,7 @@ The first T-images \textit{banque} and \textit{banc} only share \textit{bank} on
 
 Looking at the first T-images \textit{banc} and \textit{fauteuil} (Figures 12 and 13), we see that \textit{banc} is connected to \textit{bank,} \textit{sofa,} \textit{zetel} and \textit{leunstoel} in the inverse T-image (\figref{fig:key:12}), and that \textit{fauteuil} is connected to \textit{bank,} \textit{sofa,} \textit{zetel} and \textit{leunstoel} in the inverse T-image (\figref{fig:key:13}). In their inverse T-images, \textit{banc} and \textit{fauteuil} share, apart from \textit{bank}, also \textit{sofa,} \textit{zetel} and \textit{leunstoel}. \textit{Banc} and \textit{fauteuil} are thus directly connected by means of intersections with other sets: they do not only share \textit{bank} in the inverse T-image, they also share \textit{sofa,} \textit{zetel} and \textit{leunstoel}, proving the closer semantic relatedness of \textit{banc} and \textit{fauteuil}, and also showing that \textit{bank,} \textit{sofa,} \textit{zetel} and \textit{leunstoel} are semantically related.
 
-
+\todo[inline]{Fig 3.5 and 3.4 are duplicates?}
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img11.png}
 \caption{\label{fig:key:12}  Inverse T-image of \textit{banc}}
@@ -144,6 +193,18 @@ Looking at the first T-images \textit{banc} and \textit{fauteuil} (Figures 12 an
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img12.png}
+\begin{tikzpicture}
+    \matrix (SMM) [draw,matrix of nodes,nodes in empty cells,row sep=1cm,column sep=2em] {
+        & bank & &\\
+        &  & & fauteuil\\
+        bank & sofa & zetel & leunstoel\\
+    };
+    \draw[->] (SMM-1-2) -- (SMM-2-4);
+    \foreach \i in {1,2,3,4} \draw[->] (SMM-2-4) -- (SMM-3-\i);
+    \node[left=1cm of SMM-1-1.center,] {\scshape initial lexeme a};
+    \node[left=1cm of SMM-2-1.center,] {\scshape first t-image};
+    \node[left=1cm of SMM-3-1.center,] {\scshape inverse t-image};
+\end{tikzpicture}
 \caption{\label{fig:key:13}  Inverse T-image of \textit{fauteuil}}
 \end{figure}
 
@@ -154,6 +215,18 @@ A final possible scenario concerns the example of the Dutch word \textit{school}
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img13.png}
+\begin{tikzpicture}
+    \matrix (SMM) [draw,matrix of nodes,nodes in empty cells,row sep=1cm,column sep=2em,row 3 column 2/.style={red}] {
+         bank &\\
+         banc &\\
+         & school\\
+    };
+    \draw[->] (SMM-1-1) -- (SMM-2-1);
+    \draw[->,color=red] (SMM-2-1) -- (SMM-3-2);
+    \node[left=1cm of SMM-1-1.center,] {\scshape initial lexeme a};
+    \node[left=1cm of SMM-2-1.center,] {\scshape first t-image};
+    \node[left=1cm of SMM-3-1.center,] {\scshape inverse t-image};
+\end{tikzpicture}
 \caption{\label{fig:key:14}  Mutually unrelated sense \textit{school}}
 \end{figure}
 
@@ -233,62 +306,42 @@ In the previous section, I dealt with the asymmetric nature of translation and d
 Within the original SMM, hierarchical patterns are “only based on overlap relations among \textit{t-}images” and are obtained by ranking the lexemes “independently of frequency of occurrence” (\citealt{johansson_translational_1998}: 73). The degree of semantic similarity between the lexemes in the created hierarchy is only based on the number of overlapping translations while frequency information is excluded. \tabref{tab:key:2} shows a fictitious example of the translational relation in the inverse T-image of Dutch \textit{bank} with French as a pivot language. Based on this information, and following Dyvik, the centrality of \textit{bank} in a field with \textit{bank,} \textit{financiële} \textit{instelling,} \textit{sofa} and \textit{leunstoel} could be deduced from the fact that bank is a translation of all three French lexemes \textit{banque,} \textit{banc} and \textit{fauteuil}.
 
 
-\begin{table}\caption{
-Table~2  Overlapping translations of bank (ficticious) in the inverse T-image
-}
-\label{tab:key:}
+A visualization based solely on overlapping t-images is usually realized via Venn diagrams \citep{dyvik_semantic_2011}, which tend to get rather complex to interpret. This apparent weak point of the SMM has led computational linguists to propose different methods of visualization which can be of use for computational research purposes (see e.g. \citealt{ganter_conceptual_2005}). It is not in the scope of this book to computationally implement the SMM. However, the objective to create visualizations which can provide more insights into the alleged semantic differences between translated and non-translated language on the basis of the SMM, implies the use of methods more closely connected to distributional semantics. Within that framework, the typical approach is to collect occurrence counts of words and other words/features in a frequency table. The reason is that frequencies indicate the strength of certain relations, i.e. they will tell us which patterns are important. Such frequency tables can be thought to represent translated language when the translated lexemes are represented as rows with their source language lexemes as column variables. They can represent non-translated language when the non-translated (source language) lexemes are represented as rows with their translations as column variables. The integration of frequency information is the second major extension to the SMM. If frequency information is now integrated into the previously given fictitious example of bank, the result looks as follows for non-translated (original/source) language bank (\tabref{tab:key:3}) and translated (target) language bank (\tabref{tab:key:4}).
 
-\begin{tabularx}{\textwidth}{XXXXX}
+\begin{table}\caption{Table~2  Overlapping translations of bank (ficticious) in the inverse T-image\label{tab:key:}}
+\begin{tabularx}{\textwidth}{lXXXX}
 \lsptoprule
-
 %%[Warning: Draw object ignored]
-\textbf{is} \textbf{translated} \textbf{as} & \textbf{bank\textsubscript{[nl]}} & \textbf{financiële} \textbf{instelling\textsubscript{[nl]}} & \textbf{sofa\textsubscript{[nl]}} & \textbf{leunstoel\textsubscript{[nl]}}\\
-\textbf{banque\textsubscript{[fr]}} & X & X & Ø & Ø\\
-\textbf{banc\textsubscript{[fr]}} & X & Ø & X & X\\
-\textbf{fauteuil\textsubscript{[fr]}} & X & Ø & X & X\\
+{is} {translated} {as} & {bank\textsubscript{[nl]}} & {financiële} {instelling\textsubscript{[nl]}} & {sofa\textsubscript{[nl]}} & {leunstoel\textsubscript{[nl]}}\\\midrule
+{banque\textsubscript{[fr]}} & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush\\
+{banc\textsubscript{[fr]}} & \Checkmark & \XSolidBrush & \Checkmark & \Checkmark\\
+{fauteuil\textsubscript{[fr]}} & \Checkmark & \XSolidBrush & \Checkmark & \Checkmark\\
 \lspbottomrule
 \end{tabularx}
 \end{table}
 
-A visualization based solely on overlapping t-images is usually realized via Venn diagrams \citep{dyvik_semantic_2011}, which tend to get rather complex to interpret. This apparent weak point of the SMM has led computational linguists to propose different methods of visualization which can be of use for computational research purposes (see e.g. \citealt{ganter_conceptual_2005}). It is not in the scope of this book to computationally implement the SMM. However, the objective to create visualizations which can provide more insights into the alleged semantic differences between translated and non-translated language on the basis of the SMM, implies the use of methods more closely connected to distributional semantics. Within that framework, the typical approach is to collect occurrence counts of words and other words/features in a frequency table. The reason is that frequencies indicate the strength of certain relations, i.e. they will tell us which patterns are important. Such frequency tables can be thought to represent translated language when the translated lexemes are represented as rows with their source language lexemes as column variables. They can represent non-translated language when the non-translated (source language) lexemes are represented as rows with their translations as column variables. The integration of frequency information is the second major extension to the SMM. If frequency information is now integrated into the previously given fictitious example of bank, the result looks as follows for non-translated (original/source) language bank (\tabref{tab:key:3}) and translated (target) language bank (\tabref{tab:key:4}):
-
-
-\begin{table}\caption{
-Table~3  Frequency table for original bank – second T-image (fictitious)
-}
-\label{tab:key:}
-
-\begin{tabularx}{\textwidth}{XXXX}
+\begin{table}
+\caption{Table~3  Frequency table for original bank – second T-image (fictitious)\label{tab:key:3}}
+\begin{tabularx}{\textwidth}{Xrrr}
 \lsptoprule
-
-\textbf{is} \textbf{translated}
-
-%%[Warning: Draw object ignored]
-\textbf{n} \textbf{times} \textbf{as} & \textbf{banque\textsubscript{[fr]}} & \textbf{banc\textsubscript{[fr]}} & \textbf{fauteuil\textsubscript{[fr]}}\\
-\textbf{bank\textsubscript{[nl]}} & 231 & 61 & 45\\
-\textbf{financiële} \textbf{instelling\textsubscript{[nl]}} & 178 & 0 & 0\\
-\textbf{sofa\textsubscript{[nl]}} & 0 & 124 & 32\\
-\textbf{leunstoel\textsubscript{[nl]}} & 0 & 27 & 76\\
+{is} {translated} {n} {times} {as} & {banque\textsubscript{[fr]}} & {banc\textsubscript{[fr]}} & {fauteuil\textsubscript{[fr]}}\\\midrule
+{bank\textsubscript{[nl]}} & 231 & 61 & 45\\
+{financiële} {instelling\textsubscript{[nl]}} & 178 & 0 & 0\\
+{sofa\textsubscript{[nl]}} & 0 & 124 & 32\\
+{leunstoel\textsubscript{[nl]}} & 0 & 27 & 76\\
 \lspbottomrule
 \end{tabularx}
 \end{table}
 
-\begin{table}\caption{
-Table~4  Frequency table for translated bank - \textit{inverse} \textit{T-image} (fictitious)
-}
-\label{tab:key:}
-
-\begin{tabularx}{\textwidth}{XXXX}
+\begin{table}
+\caption{Table~4  Frequency table for translated bank - \textit{inverse} \textit{T-image} (fictitious)\label{tab:key:}}
+\begin{tabularx}{\textwidth}{Xrrr}
 \lsptoprule
-
-\textbf{is} \textbf{n} \textbf{times}
-
-%%[Warning: Draw object ignored]
-\textbf{a} \textbf{translation} \textbf{of} & \textbf{banque\textsubscript{[fr]}} & \textbf{banc\textsubscript{[fr]}} & \textbf{fauteuil\textsubscript{[fr]}}\\
-\textbf{bank\textsubscript{[nl]}} & 230 & 32 & 45\\
-\textbf{financiële} \textbf{instelling\textsubscript{[nl]}} & 121 & 0 & 0\\
-\textbf{sofa\textsubscript{[nl]}} & 0 & 98 & 32\\
-\textbf{leunstoel\textsubscript{[nl]}} & 0 & 67 & 43\\
+{is} {n} {times} a translation of & {banque\textsubscript{[fr]}} & {banc\textsubscript{[fr]}} & {fauteuil\textsubscript{[fr]}}\\\midrule
+{bank\textsubscript{[nl]}} & 230 & 32 & 45\\
+{financiële} {instelling\textsubscript{[nl]}} & 121 & 0 & 0\\
+{sofa\textsubscript{[nl]}} & 0 & 98 & 32\\
+{leunstoel\textsubscript{[nl]}} & 0 & 67 & 43\\
 \lspbottomrule
 \end{tabularx}
 \end{table}
@@ -412,70 +465,44 @@ The 336 remaining observations for the first T-image of beginnen\textsubscript{E
 
 
 \begin{table}
-Table~5  First T-image of beginnen\textsubscript{ENG} (raw frequencies)
-
- 
-
-\begin{tabularx}{\textwidth}{XX} &  \textbf{beginnen}\\
+\caption{Table~5  First T-image of beginnen\textsubscript{ENG} (raw frequencies)\todo[inline]{I split the rows  in 2 and placed them besides each other}}
+\begin{tabular}{lr@{\hspace{5em}}lr} 
 \lsptoprule
-\textbf{already} &  1\\
-\textbf{as} \textbf{from} &  1\\
-\textbf{aspiring} &  1\\
-\textbf{beginning} \textbf{(adj)} &  2\\
-\textbf{beginning} \textbf{(n)} &  \textbf{3}\\
-\textbf{first} \textbf{of} \textbf{all} &  \textbf{3}\\
-\textbf{fundamental} &  1\\
-\textbf{initial} &  1\\
-\textbf{introduction} &  1\\
-\textbf{nascent} &  2\\
-\textbf{new} &  1\\
-\textbf{original} &  1\\
-\textbf{start} \textbf{(n)} &  \textbf{7}\\
-\textbf{start-up} \textbf{(n)} &  1\\
-\textbf{to} \textbf{adopt} &  1\\
-\textbf{to} \textbf{assume} &  1\\
-\textbf{to} \textbf{be} \textbf{rooted} &  1\\
-\textbf{to} \textbf{bear} &  1\\
-\textbf{to} \textbf{begin} &  \textbf{89}\\
-\textbf{to} \textbf{come} &  1\\
-\textbf{to} \textbf{commence} &  2\\
-\textbf{to} \textbf{develop} &  1\\
-\textbf{to} \textbf{embark} &  2\\
-\textbf{to} \textbf{emerge} &  1\\
-\textbf{to} \textbf{enter} &  2\\
-\textbf{to} \textbf{gain} &  1\\
-\textbf{to} \textbf{go} \textbf{ahead} &  1\\
-\textbf{to} \textbf{go} \textbf{into} &  1\\
-\textbf{to} \textbf{kick} \textbf{off} &  1\\
-\textbf{to} \textbf{launch} &  2\\
-\textbf{to} \textbf{let} &  1\\
-\textbf{to} \textbf{open} &  \textbf{5}\\
-\textbf{to} \textbf{result} &  1\\
-\textbf{to} \textbf{see} &  1\\
-\textbf{to} \textbf{set} \textbf{up} &  \textbf{3}\\
-\textbf{to} \textbf{start} &  \textbf{171}\\
-\textbf{to} \textbf{start} \textbf{off} &  2\\
-\textbf{to} \textbf{start} \textbf{out} &  \textbf{6}\\
-\textbf{to} \textbf{start} \textbf{up} &  \textbf{5}\\
-\textbf{to} \textbf{take} \textbf{up} &  2\\
-\textbf{to} \textbf{talk} &  1\\
-\textbf{to} \textbf{try} &  1\\
-\textbf{to} \textbf{undertake} &  2\\
-\textbf{young} &  1\\
-\textbf{TOTAL} &  336\\
+&  {beginnen}               &             & beginnen     \\\midrule      
+{already} &  1            &             {to} {embark} &  2\\
+{as} {from} &  1          &           {to} {emerge} &  1\\
+{aspiring} &  1           &            {to} {enter} &  2\\
+{beginning} {(adj)} &  2  &   {to} {gain} &  1\\
+{beginning} {(n)} &  {3}  &   {to} {go} {ahead} &  1\\
+{first} {of} {all} &  {3} &  {to} {go} {into} &  1\\
+{fundamental} &  1        &         {to} {kick} {off} &  1\\
+{initial} &  1            &             {to} {launch} &  2\\
+{introduction} &  1       &        {to} {let} &  1\\
+{nascent} &  2            &             {to} {open} &  {5}\\
+{new} &  1                &                 {to} {result} &  1\\
+{original} &  1           &            {to} {see} &  1\\
+{start} {(n)} &  {7}      &       {to} {set} {up} &  {3}\\
+{start-up} {(n)} &  1     &      {to} {start} &  {171}\\
+{to} {adopt} &  1         &          {to} {start} {off} &  2\\
+{to} {assume} &  1        &         {to} {start} {out} &  {6}\\
+{to} {be} {rooted} &  1   &    {to} {start} {up} &  {5}\\
+{to} {bear} &  1          &           {to} {take} {up} &  2\\
+{to} {begin} &  {89}      &       {to} {talk} &  1\\
+{to} {come} &  1          &           {to} {try} &  1\\
+{to} {commence} &  2      &       {to} {undertake} &  2\\
+{to} {develop} &  1       &        {young} &  1\\
+{TOTAL} &  336\\
 \lspbottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
 
 
 \begin{table}
-
-Table~6  First T-image of beginnen\textsubscript{ENG}
+\caption{Table~6  First T-image of beginnen\textsubscript{ENG}}
 
 \todo[inline]{check bullets in original}
 \begin{tabularx}{\textwidth}{XXX}
 \lsptoprule
-
 \textbf{Step} \textbf{of} \textbf{the} \textbf{SMM++} & \multicolumn{2}{c}{ \textbf{FIRST} \textbf{T-IMAGE}}\\
 \textbf{Source} \textbf{language} & \multicolumn{2}{c}{ Dutch}\\
 \textbf{Target} \textbf{language} & \multicolumn{2}{c}{ English}\\
@@ -512,7 +539,7 @@ The retrieval task of the SMM++ was also carried out with French as a pivot lang
 
 
 \begin{table}
-Table~7  First T-image of beginnen\textsubscript{FR}
+\caption{Table~7  First T-image of beginnen\textsubscript{FR}}
 
 
 \begin{tabularx}{\textwidth}{XXX}
@@ -819,14 +846,18 @@ Correspondence Analysis (CA) – a method of displaying the rows and columns of 
 Essentially, CA works as follows: given a fictitious data matrix in \tabref{tab:key:12}, the objective is to display the Dutch lexemes in the rows and the language B lexemes (in this example French lexemes) in the columns as points in a spatial map.
 
 
-\begin{table}\caption{
-Table~12  Fictitious data matrix for CA
-}
-\label{tab:key:}
- 
-
+\begin{table}\caption{Table~12  Fictitious data matrix for CA\label{tab:key:}}
+\begin{tabular}{lrrrr}
+\lsptoprule
+& commencer & d\'{e}buter & d\'ebut & d\'epart\\\midrule
+beginnen     & 7 & 5 & 4 & 3\\
+starten      & 5 & 4 & 2 & 2\\
+aanvangen    & 0 & 3 & 2 & 0\\
+aanvatten    & 2 & 0 & 1 & 1\\
+v start gaan & 3 & 5 & 0 & 0\\
+\lspbottomrule
+\end{tabular}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img15.png}
- 
 \end{table}
 
 The initial map has as many dimensions as there are columns in the data matrix (\figref{fig:key:16}).
@@ -1105,34 +1136,31 @@ Secondly, the output for each combination is visually inspected for presence of 
 Finally, the p-values (which were introduced in \sectref{sec:3.7.2.3} to determine the cluster solution) will be used as a third element to assess the overall strength of the clustering structure. To do so, the number of significant nodes (i.e. with a p\textsuperscript{{}-}value of 0.95 or higher) in the dendrogram will be counted. Each of the dendrograms presented in the comparison counts 14 nodes. If ${\geq}$ 7 nodes in the dendrogram are significant, this will be considered as an indication of a strong overall clustering structure. The number in the third column of \tabref{tab:key:13} thus indicates the number of significant p-values (${\geq}$0.95) on a total of 14 nodes.
 
 
-\begin{table}\caption{
-Table~13  Combinatory possibilities of the selected distance measures, clustering algorithms and ‘spatial maps’
-}
-\label{tab:key:}
-
-\begin{tabularx}{\textwidth}{XXXXX} 
+\begin{table}\caption{Table~13  Combinatory possibilities of the selected distance measures, clustering algorithms and ``spatial maps''. \textsuperscript{†}: (+ high space dilation)\label{tab:key:}}
+\begin{tabular}{llrlr} 
 \lsptoprule
-& \bfseries Procedural combination & \bfseries Agglomerative coefficient & \textbf{Chaining} \textbf{effect} & \textbf{p-values}\\
-1 & Euclidean, Average & 0,72 & YES & 10\\
-2 & Euclidean, Average, on CA & 0,74 & YES & 10\\
-3 & Euclidean, Average, on LSA & 0,61 & YES & 8\\
-4 & Euclidean, Complete & 0,73 & YES & 10\\
-5 & Euclidean, Complete, on CA & 0,76 & YES & 9\\
-6 & Euclidean, Complete, on LSA & 0,65 & high & 4\\
-7 & Euclidean, Ward’s & 0,78 & YES & 9\\
-8 & Euclidean, Ward’s, on CA & 0,89 & NO & 9\\
-9 & Euclidean, Ward’s, on LSA & 0,72 & NO & 4\\
-10 & Canberra, Average & 0,22 & high & 2\\
-11 & Canberra, Average, on CA & 0,95 & low (+ high space dilation) & 6\\
-12 & Canberra, Average, on LSA & 0,82 & NO & 6\\
-13 & Canberra, Complete & 0,27 & NO & 1\\
-14 & Canberra, Complete, on CA & 0,99 & low (+ high space dilation) & 7\\
-15 & Canberra, Complete, on LSA & 0,99 & low (+ high space dilation) & 9\\
-16 & Canberra, Ward’s & 0,43 & NO & 2\\
-17 & Canberra, Ward’s, on CA & 0,99 & low (+ high space dilation) & 5\\
-18 & Canberra, Ward’s, on LSA & 0,96 & NO & 3\\
+&  Procedural combination &  Agglomerative & {Chaining}  & {p-values}\\
+&                         &  coefficient   & {effect} \\\midrule
+1 & Euclidean, Average          & 0.72 & YES & 10\\
+2 & Euclidean, Average, on CA   & 0.74 & YES & 10\\
+3 & Euclidean, Average, on LSA  & 0.61 & YES & 8\\
+4 & Euclidean, Complete         & 0.73 & YES & 10\\
+5 & Euclidean, Complete, on CA  & 0.76 & YES & 9\\
+6 & Euclidean, Complete, on LSA & 0.65 & high & 4\\
+7 & Euclidean, Ward’s           & 0.78 & YES & 9\\
+8 & Euclidean, Ward’s, on CA    & 0.89 & NO & 9\\
+9 & Euclidean, Ward’s, on LSA   & 0.72 & NO & 4\\
+10 & Canberra, Average          & 0.22 & high & 2\\
+11 & Canberra, Average, on CA   & 0.95 & low\textsuperscript{†}  & 6\\
+12 & Canberra, Average, on LSA  & 0.82 & NO & 6\\
+13 & Canberra, Complete         & 0.27 & NO & 1\\
+14 & Canberra, Complete, on CA  & 0.99 & low\textsuperscript{†} & 7\\
+15 & Canberra, Complete, on LSA & 0.99 & low\textsuperscript{†} & 9\\
+16 & Canberra, Ward’s           & 0.43 & NO & 2\\
+17 & Canberra, Ward’s, on CA    & 0.99 & low\textsuperscript{†} & 5\\
+18 & Canberra, Ward’s, on LSA   & 0.96 & NO & 3\\
 \lspbottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
 
 \begin{figure}\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img30.png}
@@ -1274,9 +1302,8 @@ The prototype-based organization of the clusters within each dendrogram will be 
 The coordinates of the cluster center (the centroid) are calculated on the output of the CA (i.e. the coordinates of the CA) with the built-in function centers\_ca() from the svs{}-package. Next, the Euclidean distance from each centroid to the zero-point of the semantic space is calculated with the helper function dist\_wrt() from svs. Finally, the distances of the centroids to the origin of the semantic space are visualized with a dot chart. The example in \figref{fig:key:48} shows the distance of each of the clusters in the HAC visualization for SourceDutch to the origin of the semantic space. Since the zero-point of the semantic space is held to be the prototypical center, clusters that are closer to the zero-point of the semantic space are considerd as more prototypical and clusters further away from the zero-point as more peripheral. 
 
 
-\begin{tabularx}{\textwidth}{XX}
+\begin{tabular}{ll}
 \lsptoprule
-
 Cluster 6 & eerst\\
 Cluster 5 & krijgen, komen, worden\\
 Cluster 4 & ontstaan, openen\\
@@ -1284,7 +1311,8 @@ Cluster 3 & Starten, van start gaan, opstarten, beginnen, gaan\\
 Cluster 2 & aanvang, begin, start\\
 Cluster 1 & opzetten, oprichten\\
 \lspbottomrule
-\end{tabularx}
+\end{tabular}\todo{Where does this table belong?}
+
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img48.png}
 \caption{\label{fig:key:48}  Dot chart presenting the distance of the cluster centroids to the zero-point of the semantic space of SourceDutch}

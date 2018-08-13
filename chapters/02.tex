@@ -175,7 +175,7 @@ The third universal feature of translation, normalization – also referred to a
 
 
 
-As Baker intuited about normalization, it seems very hard to pretend that normalizing trends in translated texts are (completely) source language independent. As a consequence, source language influence on translated texts has been taken into account with regards to the normalization hypothesis, and researchers like Teich have hypothesized a two-directional influence on translated texts:
+As Baker intuited about normalization, it seems very hard to pretend that normalizing trends in translated texts are (completely) source language independent. As a consequence, source language influence on translated texts has been taken into account with regards to the normalization hypothesis, and researchers like Teich have hypothesized a two-directional influence on translated texts:\todo[inline]{quote or bullet list?}
 
 
 \begin{quote}
@@ -491,6 +491,9 @@ The semantic informativity of the procedure can be understood as follows. Consid
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img2.png}
+\begin{forest} for tree={grow=east}
+[heks [witch] [hag] ]
+\end{forest}
 \caption{\label{fig:key:3}  Translational correspondence}
 \end{figure}
 
@@ -500,6 +503,9 @@ Subsequently, the lexical sub-senses of \textit{heks} could be expressed as cont
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img3.png}
+\begin{forest} for tree={grow'=east,align=center}
+[ heks\\{[}heks|hag{]}\\{[}heks|witch{]} [hag\\{[}hegs|hag{]}] [witch\\{[}heks|witch{]}]  ]
+\end{forest}
 \caption{\label{fig:key:4}  Translationally derived features}
 \end{figure}
 
@@ -615,7 +621,10 @@ In machine translation (the field where WSD researchers initially got the idea f
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img4.png}
-\caption{\label{fig:key:5}  Different senses of the English lexeme \textit{bank} are assigned based on its French translations}
+\begin{forest}for tree={grow=east,align=center}
+    [bank  [\textit{rive}\\{[}riverside{]}] [~~~~~~~~~~~~~~~~~~~~,name=dummy,no edge [bank\\{[}\textit{banque}{],} {[}\textit{river}{]},base=center,edge=->]] [\textit{banque}\\{[}financial institution{]}] ]
+\end{forest}
+\caption{\label{fig:key:5}Different senses of the English lexeme \textit{bank} are assigned based on its French translations}
 \end{figure}
 
 
@@ -628,12 +637,18 @@ Not all ambiguities can be resolved through ‘simple’ translational equivalen
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img5.png}
-\caption{\label{fig:key:6}  Unresolved disambiguation via one language}
+\begin{forest} for tree={grow=east,align=center}
+[school\textsubscript{Du} [\textit{school}\textsubscript{Eng}\\{[}group of fishes{]}] [~~~~~~~~~~~~~~~~~~~~,name=dummy,no edge [school\textsubscript{Du}\\{[}\textit{school}{],} {[}\textit{school}{]},base=center,edge=->]]  [\textit{school}\textsubscript{Eng}\\ {[}Educational institution{]}] ]
+\end{forest}
+\caption{\label{fig:key:6}Unresolved disambiguation via one language}
 \end{figure}
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img6.png}
-\caption{\label{fig:key:7}  Resolved disambiguation via two languages}
+\begin{forest} for tree={grow=east,align=center}
+[school\textsubscript{Du}\\\vphantom{jh}~ [\textit{banc}\textsubscript{Fr}\\{[}group of fishes{]}] [\textit{school}\textsubscript{Eng}\\{[}group of fishes{]},base=center [school\textsubscript{Du}\\{[}\textit{school}{],} {[}\textit{school, banc}{]},base=center,edge=->]]  [\textit{school}\textsubscript{Eng}\\ {[}Educational institution{]}] ]
+\end{forest}
+\caption{\label{fig:key:7}Resolved disambiguation via two languages}
 \end{figure}
 
 
