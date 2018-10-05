@@ -264,311 +264,111 @@ Total & &  6 &  232 &  180 &  328 &  10 &  68 &  39 &  53 &  7 &  78 &  51 &  18
 \todo[inline]{Rotate this to fit page better?}
 
 \newpage
-
 \section{Appendix G: R script}
 
-\# Set CRAN-mirror to "Belgium (Ghent)"
+\lstdefinestyle{RStyle}{
+  language=R,
+  numbers=left,
+  stepnumber=1,
+  numbersep=10pt,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true
+}
 
+\begin{lstlisting}[style=RStyle]
+# Set CRAN-mirror to "Belgium (Ghent)"
+# Install package "svs"
+# Load package "svs"
 
-
-\# Install package "svs"
-
-
-
-\# Load package "svs"
-
-
-
-\# Read in data file for TransDutchFR or TransDutchENG:
-
-
-
+# Read in data file for TransDutchFR or TransDutchENG:
 DAT <- read.csv2(file.choose(),header=TRUE,strip.white=TRUE)
-
-
-
-\# For SourceDutch, read in 2 data files:
-
-
-
+# For SourceDutch, read in 2 data files:
 DAT.FR2 <- read.csv2(file.choose(),header=TRUE,strip.white=TRUE)
-
-
-
 DAT.ENG2 <- read.csv2(file.choose(),header=TRUE,strip.white=TRUE)
-
-
-
-\# Convert into frequency tables:
-
-
-
+# Convert into frequency tables:
 TAB.1 <- table(DAT.FR2[, c(1,2) ])
-
-
-
 TAB.2 <- table(DAT.ENG2[, c(1,2) ])
-
-
-
-\# And combine the two tables:
-
-
-
+# And combine the two tables:
 DAT <- as.table(cbind(TAB.1,TAB.2))
 
+# Carry out 'fast' correspondence analysis for TransDutch:
+CSP <- fast_sca(DAT[, c(1,2) ])
+# Carry out 'fast' correspondence analysis for SourceDutch:
+CSP <- fast_sca(DAT)
 
-
-\# Carry out 'fast' correspondence analysis for TransDutch:
-
-
-
-CSP <- fast\_sca(DAT[, c(1,2) ])
-
-
-
-\# Carry out 'fast' correspondence analysis for SourceDutch:
-
-
-
-CSP <- fast\_sca(DAT)
-
-
-
-\# Generate a scree plot or a cumulative scree plot
-
-
-
+# Generate a scree plot or a cumulative scree plot
 barplot(CSP\$val)
-
-
-
 barplot(cumsum(CSP\$val)/sum(CSP\$val))
 
-
-
-\# Choose on which of the two varieties the analysis should be focussed
-
-
-
-\# Indicate the number of dimensions
-
-
-
+# Choose on which of the two varieties the analysis should be focussed
+# Indicate the number of dimensions
 POS <- CSP\$pos1[, 1:...]
-
-
-
 \# Or:
-
-
-
 POS <- CSP\$pos2[, 1:...]
 
-
-
-\# Load pvclust:
-
-
-
+# Load pvclust:
 library(pvclust)
-
-
-
-\# Carry out a HAC on CA with pvclust:
-
-
-
+# Carry out a HAC on CA with pvclust:
 CLS <- pvclust(t(POS),method.hclust="ward",method.dist="euclidean",nboot=3000)
 
-
-
-\# Plot the dendogram:
-
-
-
+# Plot the dendogram:
 plot(CLS,main="...",sub="...",xlab="...")
 
-
-
-\# Determine number of clusters:
-
-
-
+# Determine number of clusters:
 rect.hclust(CLS\$hclust,h=...)
-
-
-
-\#or
-
-
-
+#or
 pvrect(CLS,alpha=0.95)
 
-
-
-\# Validate cluster solution
-
-
-
-\# Load package "cluster"
-
-
-
+# Validate cluster solution
+# Load package "cluster"
 library(cluster)
-
-
-
-\# Apply partitioning around medoids pam() to output of CA, using the same distance measure as for HAC, with n = number of clusters in the solution
-
-
-
+# Apply partitioning around medoids pam() to output of CA, using the same distance measure as for HAC, with n = number of clusters in the solution
 PAM<-pam(POS, n, diss = FALSE, metric = "euclidean", medoids = NULL, stand = FALSE, cluster.only = FALSE, do.swap = TRUE, pamonce = FALSE, trace.lev = 0)
-
-
-
 plot(PAM)
-
-
-
-\# Second validation of cluster solution via K-means
-
-
-
-\# Calculate cluster centers on a list
-
-
-
+# Second validation of cluster solution via K-means
+# Calculate cluster centers on a list
 LST <- rect.hclust(CLS\$hclust,h=...)
-
-
-
-\#or
-
-
-
+#or
 LST <- pvpick(CLS,alpha=0.95) 
+# Add singleton clusters with complete_pvpick() function from svs()
+# for SourceDutch
+LST <- complete_pvpick(LST,rownames(COM))
+# for TransDutch
+LST <- complete_pvpick(LST,levels(DAT[,2]))
+# for MCA
+LST <- complete_pvpick(LST,unlist(lapply(DAT,levels)))
 
+# Calculate cluster centers with centers_ca() function from svs()
+# for SourceDutch
+CEN <- centers_ca(POS,LST,apply(COM,1,sum))
+# for TransDutch
+CEN <- centers_ca(POS,LST\$clusters,summary(DAT[,2]))
+# for MCA
+CEN <- centers_ca(POS,LST\$clusters,freq_ca(DAT))
 
-
-\# Add singleton clusters with complete\_pvpick() function from svs()
-
-
-
-\# for SourceDutch
-
-
-
-LST <- complete\_pvpick(LST,rownames(COM))
-
-
-
-\# for TransDutch
-
-
-
-LST <- complete\_pvpick(LST,levels(DAT[,2]))
-
-
-
-\# for MCA
-
-
-
-LST <- complete\_pvpick(LST,unlist(lapply(DAT,levels)))
-
-
-
-\# Calculate cluster centers with centers\_ca() function from svs()
-
-
-
-\# for SourceDutch
-
-
-
-CEN <- centers\_ca(POS,LST,apply(COM,1,sum))
-
-
-
-\# for TransDutch
-
-
-
-CEN <- centers\_ca(POS,LST\$clusters,summary(DAT[,2]))
-
-
-
-\# for MCA
-
-
-
-CEN <- centers\_ca(POS,LST\$clusters,freq\_ca(DAT))
-
-
-
-\# Apply K-means
-
-
-
+# Apply K-means
 KCL <- kmeans(POS,CEN)
 
-
-
-\# Validate external cluster structure with the dist\_wrt() function from svs
-
-
-
-DIS <-dist\_wrt(CEN)
-
-
-
+# Validate external cluster structure with the dist_wrt() function from svs
+DIS <-dist_wrt(CEN)
 dotchart(DIS,xlim=c(0,max(DIS)),bg="...",main="...",xlab="...")
 
-
-
-\# Validate internal cluster structure with the dist\_wrt\_centers() function from svs
-
-
-
-\#for SourceDutch
-
-
-
+# Validate internal cluster structure with the dist_wrt_centers() function from svs
+#for SourceDutch
 freq= apply(COM,1,sum)
-
-
-
-\#for TransDutch
-
-
-
-freq = freq\_ca(DAT[,2])
-
-
-
-\#for MCA
-
-
-
-freq\_ca(DAT)
-
-
-
-DIS <- dist\_wrt\_centers(POS, KCL, freq = apply(COM,1,sum), members\_only = FALSE)
-
-
-
+#for TransDutch
+freq = freq_ca(DAT[,2])
+#for MCA
+freq_ca(DAT)
+DIS <- dist_wrt_centers(POS, KCL, freq = apply(COM,1,sum), members_only = FALSE)
 dotchart(DIS[[...]],xlim=c(0,max(DIS[[...]])),bg="...",main="...",xlab="...")
 
-
-
-\#Apply MCA and repeat procedure as for HAC on CA
-
-
-
-CSP <- fast\_mca(DAT)
-
+#Apply MCA and repeat procedure as for HAC on CA
+CSP <- fast_mca(DAT)
+\end{lstlisting}
 
 \section{Appendix H: Distances of lexemes to centroids for SourceDutch}
 
@@ -1010,7 +810,6 @@ DIS
 
 
   2.624651e+00 
-
 
 \section{Appendix J: Distances of lexemes to centroids for TransDutch\textsubscript{FR}}
 
