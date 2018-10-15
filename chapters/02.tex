@@ -286,10 +286,40 @@ Ivir’s main question with respect to translation is: “[h]ow much of the tran
 When an L1 item has a given semantic function, its L2 correspondent is the L2 item A; for another function, its correspondent is the L2 item B, and for yet another the L2 item C, etc.; each of these L2 items, however, also corresponds to some other L1 items, resulting in a complex set of relations between the L1 item A and the L2 items A, B and C, then among the L2 items A, B, C, then between each of them and the L1 items A, B, C, D, E, F, G, and finally among the L1 items A, B, C, D, E, F, G. Conditions can be specified for these relations, which, together with the listing of multiple correspondences, are exploited in pedagogical and other applications of contrastive analysis \citep[478-479]{dirven_functionalism_1987}.
 \end{quote}
 
-Schematically, the procedure then looks as follows (adapted from \citealt[478]{dirven_functionalism_1987}:
+Schematically, the procedure then looks as follows (adapted from \citealt[478]{dirven_functionalism_1987}):
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img1.png}
+\begin{forest} for tree={
+	grow=east, 
+	reversed, 
+	align=center, 
+	base=bottom,
+	l sep=20ex,
+	s sep=.5ex,
+	font=\footnotesize
+}
+[A L\textsubscript{1} 
+	[A L\textsubscript{2} 
+		[A L\textsubscript{1}]{\path[] (.north) --++(0em,1cm) node[anchor=south,align=center]{Back-translation into L\textsubscript{1}};}
+		[B L\textsubscript{1}]
+		[C L\textsubscript{1}]
+		[...]
+	]{\path[] (.north) --++(0em,2.1cm) node[anchor=south,align=center]{Translation into L\textsubscript{2}};}
+	[B L\textsubscript{2}
+		[A L\textsubscript{1}]
+		[D L\textsubscript{1}]
+		[...]
+	]
+	[C L\textsubscript{2}
+		[A L\textsubscript{1}]
+		[E L\textsubscript{1}]
+		[F L\textsubscript{1}]
+		[G L\textsubscript{1}]
+		[...]
+	]
+]
+\end{forest}
 \caption{\label{fig:key:2}  Back-translation procedure for contrastive analysis \citep[478]{dirven_functionalism_1987}
 }
 \end{figure}
