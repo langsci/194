@@ -49,6 +49,42 @@ Dyvik starts from an initial polysemous lexeme \textit{a} in Language A and extr
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img7.jpg}
+\begin{tikzpicture}
+\usetikzlibrary{arrows.meta,positioning,decorations.markings} 
+\tikzset{
+    box/.style={
+           rectangle,
+           text width=8em,
+           minimum height=2em,
+           text centered,
+           font=\large\bf},
+    explanation/.style={
+           rectangle,
+           text width=9em,
+           minimum height=2em,
+           text centered,
+           font=\small\it},
+    % Define arrow style
+    arrow/.style= {
+           ->,
+           -{Latex[length=15pt,width=10pt]},
+           line width=4pt,
+           rounded corners=40pt
+    }
+}
+\node[box] (initial) {Initial Lexeme};
+\node[box,below right =2cm and 2cm of initial] (first) {First T-Image};
+\node[box,below left =2cm and 2cm of first] (inverse) {Inverse T-Image};
+\node[box,below right =2cm and 2cm of inverse] (second) {Second T-Image};
+\node[explanation,below = 0cm of initial] (exinitial) {Lexeme a, language A};
+\node[explanation,below = 0cm of first] (exfirst) {All translations of a, in language B};
+\node[explanation,below = 0cm of inverse] (exinverse) {All translations back into anguage A};
+\node[explanation,below = 0cm of second] (exsecond) {All translations in language B};
+\draw[arrow](initial.east) -| (first.north);
+\draw[arrow](first.west) -|  (inverse.north);
+\draw[arrow](inverse.east) -| (second.north);
+\end{tikzpicture}
+
 \caption{\label{fig:key:8}  Work flow of the SMM}
 \end{figure}
 
