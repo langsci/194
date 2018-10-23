@@ -47,7 +47,9 @@ Note that the only difference with the output of the HAC is that \textit{worden}
 \label{sec:4.2.2}  
 In order to obtain more information about the prototype-based organization of the clusters (meaning distinctions) within each dendrogram, I determined the distance of the centroids of each cluster to the origin or zero-point of the semantic space (the prototypical center). The centroids were subsequently mapped onto a dot chart (\figref{fig:key:55}). The cluster closest to the zero-point is considered as the most central one in the semantic space.
 
-\begin{tabularx}{\textwidth}{XX}
+\begin{table}
+\caption{\nocaption}
+\begin{tabularx}{\textwidth}{Xl}
 \lsptoprule
 Cluster 6 & eerst\\
 Cluster 5 & krijgen, komen, worden\\
@@ -57,6 +59,7 @@ Cluster 2 & aanvang, begin, start\\
 Cluster 1 & opzetten, oprichten\\
 \lspbottomrule
 \end{tabularx}
+\end{table}
 
 \begin{figure} 
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img55.png}
@@ -241,7 +244,9 @@ The cluster solution proposed by the K-means clustering with 6 clusters is ident
 \label{sec:4.3.2}  
 The centroid of each cluster was calculated and its distance to the zero-point of the semantic space was assessed by mapping the centroids onto a dot chart (\figref{fig:key:66}). The content of each cluster number in the dot chart was summarized in the table accompanying \figref{fig:key:66}\footnote{Parallel to SourceDutch, the numerals on the y-axis of the dot chart in \figref{fig:key:66} are assigned by a previously established list (based on the output of the cluster analysis), necessary to calculate the cluster centroid (the order of the assigned numerals is arbitrary).}:
 
-\begin{tabularx}{\textwidth}{XX}
+\begin{table}
+\caption{\nocaption}
+\begin{tabularx}{\textwidth}{lX}
 \lsptoprule
 Cluster 1 & aanvang, start\\
 Cluster 2 & begin\\
@@ -251,6 +256,9 @@ Cluster 5 & ontstaan, openen\\
 Cluster 6 & oprichten, opzetten\\
 \lspbottomrule
 \end{tabularx}
+\end{table}
+
+
 \begin{figure} 
 
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img68.png}
@@ -307,8 +315,10 @@ The calculated distances for cluster n°1, show that \textit{oprichten} is sligh
 
 \begin{table}
 \caption{\label{tab:key:15} Comparison of medoids and lexemes closest to the centroids for TransDutch\textsubscript{ENG}}
-\begin{tabularx}{\textwidth}{XXX} & \textbf{Medoid} & \textbf{Lexeme} \textbf{closest} \textbf{to} \textbf{centroids}\\
+\begin{tabularx}{\textwidth}{XXl} 
 \lsptoprule
+& \textbf{Medoid} & \textbf{Lexeme} \textbf{closest} \textbf{to} \textbf{centroids}\\
+\midrule
 \textbf{Cluster} \textbf{n°3} & worden & beginnen\\
 \lspbottomrule
 \end{tabularx}
@@ -378,7 +388,9 @@ The cluster solution is validated by the average silhouette width for a solution
 \label{sec:4.4.2}  
 The distance from each cluster’s centroid to the zero-point of the semantic space is calculated and mapped on a dot chart (\figref{fig:key:78}). The content of each cluster number in the dot chart is summarized in the table accompanying \figref{fig:key:78}:
 
-\begin{tabularx}{\textwidth}{XX}
+\begin{table}
+\caption{\nocaption}
+\begin{tabularx}{\textwidth}{Xl}
 \lsptoprule
 Cluster 4 & eerst, gaan, beginnen, komen, worden, krijgen\\
 Cluster 3 & opzetten, oprichten, opstarten, starten, van start gaan\\
@@ -386,6 +398,8 @@ Cluster 2 & ontstaan, openen\\
 Cluster 1 & start, aanvang, begin\\
 \lspbottomrule
 \end{tabularx}
+\end{table}
+
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img81.png}
 \caption{\label{fig:key:78}  Dot chart presenting the distance of the cluster centroids to the zero-point of the semantic space of TransDutch\textsubscript{FR}}
@@ -487,74 +501,90 @@ I first give a schematic overview of the observations on both the semasiological
 
 SourceDutch\todo{Tables \& Table headings}
 
-\begin{tabularx}{\textwidth}{XXXXX}
+\begin{sidewaystable}
+\caption{\nocaption}
+\small
+\begin{tabularx}{\textwidth}{lQQQQ}
 \lsptoprule
 
-\bfseries Cluster n° & \bfseries Meta-label(s) & \bfseries Lexemes in cluster & \bfseries Semasiological phenomena & \bfseries Onomasiological phenomena\\
+\bfseries Cluster  & \bfseries Meta-label(s) & \bfseries Lexemes in cluster & \bfseries Semasiological phenomena & \bfseries Onomasiological phenomena\\
+\midrule 
 3 & REFERENCE CLUSTER/
 
-GENERAL ONSET & \itshape opstarten, starten, van start gaan, beginnen, gaan & \begin{itemize}
-\item closest to prototypical center\item ACTION\item STATE AFTER ONSET\end{itemize} & \begin{itemize}
-\item competition between \textit{beginnen} and \textit{starten} for position closest to the abstract prototype\end{itemize}\\
-2 & GENERAL ONSET (NOUN) & \itshape start, aanvang, begin & \begin{itemize}
-\item second closest to prototypical center\item closest to REFERENCE CLUSTER\end{itemize} & \begin{itemize}
-\item competition between \textit{start} and \textit{begin} for position closest to the abstract prototype\end{itemize}\\
+GENERAL ONSET & \itshape opstarten, starten, van start gaan, beginnen, gaan & 
+{\textbullet}  closest to prototypical center{\textbullet}  ACTION{\textbullet}  STATE AFTER ONSET & 
+{\textbullet}  competition between \textit{beginnen} and \textit{starten} for position closest to the abstract prototype\\
+2 & GENERAL ONSET (NOUN) & \itshape start, aanvang, begin & 
+{\textbullet}  second closest to prototypical center{\textbullet}  closest to REFERENCE CLUSTER & 
+{\textbullet}  competition between \textit{start} and \textit{begin} for position closest to the abstract prototype\\
 1 & SPECIFIC ACTION & \itshape oprichten, opzetten &  & \\
 5 & NON-LEXICALIZED INCHOATIVITY & \itshape komen, krijgen, worden &  & \\
 4 & ONSET OF ABSTRACT PROCESSES & \itshape ontstaan, openen &  & \\
 6 &  & \itshape eerst &  & \\
 \lspbottomrule
 \end{tabularx}
+\end{sidewaystable}
 
 TransDutch\textsubscript{ENG}
 
 
-\begin{tabularx}{\textwidth}{XXXXX}
+\begin{sidewaystable}
+\caption{\nocaption}
+\small
+\begin{tabularx}{\textwidth}{lQQQQ}
 \lsptoprule
 
-\bfseries Cluster n° & \bfseries Meta-label(s) & \bfseries Lexemes in cluster & \bfseries Semasiological phenomena and changes & \bfseries Onomasiological phenomena and changes\\
+\bfseries Cluster & \bfseries Meta-label(s) & \bfseries Lexemes in cluster & \bfseries Semasiological phenomena and changes & \bfseries Onomasiological phenomena and changes\\
+\midrule 
+
 3 & REFERENCE CLUSTER/
 
-GENERAL ONSET & \itshape eerst, van start gaan, beginnen, krijgen, starten, gaan, worden & \begin{itemize}
-\item closest to prototypical center\item + \textit{eerst}\item + NON-LEXICALIZED INCHOATIVITY\item ACTION vs. STATE AFTER ONSET unclear\end{itemize} & \begin{itemize}
-\item \textit{beginnen} closest to abstract prototype (< SourceDutch < TransDutch\textsubscript{FR})\item more lexemes ($\leftrightarrow $ SourceDutch)\item distance to abstract prototype: beginnen < gaan < krijgen < worden < starten < van start gaan \end{itemize}\\
-4 & NO LABEL & \itshape komen, opstarten & \begin{itemize}
-\item second closest to prototypical center\end{itemize} & \\
-2 & ONSET (NOUN) & \itshape begin &  & \begin{itemize}
-\item \textit{begin} closest to abstract prototype (< SourceDutch < TransDutch\textsubscript{FR})\end{itemize}\\
-6 & ONSET (NOUN) & \itshape aanvang, start & \begin{itemize}
-\item closer to prototypical center than cluster n°2\end{itemize} & \begin{itemize}
-\item larger difference in distance to abstract prototype between \textit{aanvang} and \textit{start} ($\leftrightarrow $ SourceDutch)\end{itemize}\\
-1 & SPECIFIC ACTION & \itshape oprichten, opzetten &  & \begin{itemize}
-\item larger difference in distance to abstract prototype between \textit{oprichten} and \textit{opzetten} ($\leftrightarrow $ SourceDutch)\end{itemize}\\
-5 & ONSET OF ABSTRACT PROCESSES & \itshape ontstaan, openen &  & \begin{itemize}
-\item smaller difference in distance to abstract prototype between \textit{openen} and \textit{ontstaan} ($\leftrightarrow $ SourceDutch)\end{itemize}\\
+GENERAL ONSET & \itshape eerst, van start gaan, beginnen, krijgen, starten, gaan, worden & 
+{\textbullet}  closest to prototypical center{\textbullet}  + \textit{eerst}{\textbullet}  + NON-LEXICALIZED INCHOATIVITY{\textbullet}  ACTION vs. STATE AFTER ONSET unclear & 
+{\textbullet}  \textit{beginnen} closest to abstract prototype (< SourceDutch < TransDutch\textsubscript{FR}){\textbullet}  more lexemes ($\leftrightarrow $ SourceDutch){\textbullet}  distance to abstract prototype: beginnen < gaan < krijgen < worden < starten < van start gaan \\
+4 & NO LABEL & \itshape komen, opstarten & 
+{\textbullet}  second closest to prototypical center & \\
+2 & ONSET (NOUN) & \itshape begin &  & 
+{\textbullet}  \textit{begin} closest to abstract prototype (< SourceDutch < TransDutch\textsubscript{FR})\\
+6 & ONSET (NOUN) & \itshape aanvang, start & 
+{\textbullet}  closer to prototypical center than cluster n°2 & 
+{\textbullet}  larger difference in distance to abstract prototype between \textit{aanvang} and \textit{start} ($\leftrightarrow $ SourceDutch)\\
+1 & SPECIFIC ACTION & \itshape oprichten, opzetten &  & 
+{\textbullet}  larger difference in distance to abstract prototype between \textit{oprichten} and \textit{opzetten} ($\leftrightarrow $ SourceDutch)\\
+5 & ONSET OF ABSTRACT PROCESSES & \itshape ontstaan, openen &  & 
+{\textbullet}  smaller difference in distance to abstract prototype between \textit{openen} and \textit{ontstaan} ($\leftrightarrow $ SourceDutch)\\
 \lspbottomrule
 \end{tabularx}
+\end{sidewaystable}
 
 TransDutch\textsubscript{FR}
 
-
-\begin{tabularx}{\textwidth}{XXXXX}
+\begin{sidewaystable}
+\caption{\nocaption}
+\small
+\begin{tabularx}{\textwidth}{lQQQQ}
 \lsptoprule
 
-\bfseries Cluster n° & \bfseries Meta-label(s) & \bfseries Lexemes in cluster & \bfseries Semasiological phenomena and changes & \bfseries Onomasiological phenomena and changes\\
-4 & REFERENCE CLUSTER & \itshape eerst, gaan, beginnen, worden, komen, krijgen & \begin{itemize}
-\item closest to prototypical center\item + \textit{eerst}\item + NON-LEXICALIZED INCHOATIVITY\item STATE AFTER ONSET\end{itemize} & \begin{itemize}
-\item \textit{beginnen} furthest away from abstract prototype (> SourceDutch > TransDutch\textsubscript{ENG})\item more lexemes $\leftrightarrow $ SourceDutch\end{itemize}\\
+\bfseries Cluster& \bfseries Meta-label(s) & \bfseries Lexemes in cluster & \bfseries Semasiological phenomena and changes & \bfseries Onomasiological phenomena and changes\\
+\midrule 
+4 & REFERENCE CLUSTER & \itshape eerst, gaan, beginnen, worden, komen, krijgen & 
+{\textbullet}  closest to prototypical center{\textbullet}  + \textit{eerst}{\textbullet}  + NON-LEXICALIZED INCHOATIVITY{\textbullet}  STATE AFTER ONSET & 
+{\textbullet}  \textit{beginnen} furthest away from abstract prototype (> SourceDutch > TransDutch\textsubscript{ENG}){\textbullet}  more lexemes $\leftrightarrow $ SourceDutch\\
 3 & SPECIFIC ACTION & {\itshape opzetten, oprichten, opstarten,}
 
 {\itshape starten,}
 
-\itshape van start gaan & \begin{itemize}
-\item second closest to prototypical center\item ACTION\end{itemize} & \begin{itemize}
-\item + \textit{opstarten}\item larger difference in distance to abstract prototype between \textit{oprichten} and \textit{opzetten} ($\leftrightarrow $ SourceDutch)\end{itemize}\\
-1 & ONSET (NOUN) & \itshape begin, aanvang, gaan &  & \begin{itemize}
-\item distance to prototype: \textit{begin} < \textit{aanvang} < \textit{start}\end{itemize}\\
-2 & ONSET OF ABSTRACT PROCESSES & \itshape ontstaan, openen &  & \begin{itemize}
-\item smaller difference in distance to prototype between \textit{openen} and \textit{ontstaan} ($\leftrightarrow $ SourceDutch)\item distance to prototype: \textit{ontstaan} < \textit{openen}\end{itemize}\\
+\itshape van start gaan & 
+{\textbullet}  second closest to prototypical center{\textbullet}  ACTION & 
+{\textbullet}  + \textit{opstarten}{\textbullet}  larger difference in distance to abstract prototype between \textit{oprichten} and \textit{opzetten} ($\leftrightarrow $ SourceDutch)\\
+1 & ONSET (NOUN) & \itshape begin, aanvang, gaan &  & 
+{\textbullet}  distance to prototype: \textit{begin} < \textit{aanvang} < \textit{start}\\
+2 & ONSET OF ABSTRACT PROCESSES & \itshape ontstaan, openen &  & 
+{\textbullet}  smaller difference in distance to prototype between \textit{openen} and \textit{ontstaan} ($\leftrightarrow $ SourceDutch){\textbullet}  distance to prototype: \textit{ontstaan} < \textit{openen}\\
 \lspbottomrule
 \end{tabularx}
+\end{sidewaystable}
+
 \subsection{\label{sec:4.5.1}  Semasiological levelling out}
 
 On the semasiological level, I observe the following changes for the REFERENCE CLUSTER\textit{/}GENERAL ONSET (\figref{fig:key:84}):
