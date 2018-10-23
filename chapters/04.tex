@@ -234,19 +234,20 @@ The chosen cluster solution was validated on the basis of the average silhouette
 A second validation was obtained via the calculation of a K-means clustering. When a cluster solution with 6 clusters is requested, K-means proposed the following solution (the numeral beneath each lexeme assigns it to a specific cluster):
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img67.png}
+\includegraphics[width=\textwidth]{figures/Vandevoorde2-img67.png}
+\footnotesize
 \begin{lstlisting}
 Clustering vector:
-      aanvang            begin       beginnen
-            1                2              3
-        komen          krijgen       ontstaan
-            4                3              5
-    opstarten         opzetten          start
-            4                6              1
-       worden
-            3
-\end{lstlisting}
-
+      aanvang       begin    beginnen      eerst             gaan 
+            1           2           3          3                3         
+        komen     krijgen    ontstaan     openen        oprichten         
+            4           3           5          5                6         
+    opstarten    opzetten       start    starten   van start gaan         
+            4           6           1          3                3         
+       worden                                            
+            3                                      
+\end{lstlisting}                                   
+ 
 
 \caption{\label{fig:key:66}  K-means clustering with 6 clusters for TransDutch\textsubscript{ENG}}
 \end{figure}
@@ -388,7 +389,19 @@ The result presented in \figref{fig:key:76} is considered as a possible visualiz
 The cluster solution is validated by the average silhouette width for a solution with 4 clusters (average silhouette width = 0.53) (\figref{fig:key:77}) and by the calculation of a K-means clusters with 4 clusters, which proposes an identical cluster solution to the output of the HAC as can be seen below (the numeral beneath each lexeme assigns it to a specific cluster). On the basis of both validation techniques, I conclude that the chosen cluster solution for TransDutch\textsubscript{FR} can be considered a good classification.
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img79.png}
+\includegraphics[width=\textwidth]{figures/Vandevoorde2-img79.png}
+\footnotesize
+\begin{lstlisting}
+Clustering vector:
+      aanvang      begin    beginnen      eerst              gaan 
+            1          1           4          4                 4
+        komen    krijgen    ontstaan     openen         oprichten
+            4          4           2          2                 3
+    opstarten   opzetten       start    starten    van start gaan
+            3          3           1          3                 3
+       worden               
+            3               
+\end{lstlisting}
 \caption{\label{fig:key:77}  K-means clustering with 4 clusters for TransDutch\textsubscript{FR}}
 \end{figure}
 
