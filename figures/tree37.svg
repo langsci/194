@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="340.49039"
+     inkscape:cx="341.50054"
      inkscape:cy="587.81278"
      inkscape:document-units="px"
      inkscape:current-layer="layer17"
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,18 +58,17 @@
      id="layer15"
      inkscape:label="orig"
      transform="translate(-356.78564,-504.14795)"
-     style="opacity:0.48235294">
+     style="display:none;opacity:0.48235294">
     <image
        sodipodi:absref="/home/snordhoff/versioning/git/langsci/books/vandevoorde/194/figures/Vandevoorde2-img37.png"
        xlink:href="Vandevoorde2-img37.png"
-       style=""
-       transform="matrix(0,1,-1,0,0,0)"
-       width="725"
-       height="675"
-       preserveAspectRatio="none"
-       id="image7928"
+       y="-1031.7856"
        x="504.14795"
-       y="-1031.7856" />
+       id="image7928"
+       preserveAspectRatio="none"
+       height="675"
+       width="725"
+       transform="matrix(0,1,-1,0,0,0)" />
   </g>
   <g
      inkscape:groupmode="layer"

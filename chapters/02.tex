@@ -288,7 +288,7 @@ When an L1 item has a given semantic function, its L2 correspondent is the L2 it
 Schematically, the procedure then looks as follows (adapted from \citealt[478]{dirven_functionalism_1987}):
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img1.png}
+% \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img1.png}
 \begin{forest} for tree={
 	grow=east, 
 	reversed, 
@@ -376,7 +376,7 @@ Convinced about the acceptability of the use of translational data, Dyvik’s fi
 The semantic informativity of the procedure can be understood as follows. Consider, for example\footnote{This example is adapted to the Dutch-English language pair from Dyvik’s (\citeyear[29-31]{langemets_translations_2005}) German-English example.}, the Dutch noun \textit{heks,} which can be translated into English as \textit{hag} and \textit{witch.} According to Dyvik, the fact that alternative translations exist, points towards a relatedness to either different ‘aspects’ or different sub-senses of the meaning of \textit{heks}: each of the English words indicates one of the many possible ways of dividing the semantic potentiality of \textit{heks} \citep[31]{langemets_translations_2005}.
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img2.png}
+% \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img2.png}
 \begin{forest} for tree={grow=east}
 [heks [witch] [hag] ]
 \end{forest}
@@ -386,7 +386,7 @@ The semantic informativity of the procedure can be understood as follows. Consid
 Subsequently, the lexical sub-senses of \textit{heks} could be expressed as contrastive pairs: <heks, hag>, and <heks, witch>. Within a translational approach, these \textit{pairs} (called \textit{sets} when several languages are involved) can be seen “as a kind of \textit{semantic} \textit{features}, [...] assignable to lexical items, both to the items they were derived from, and to others, which may inherit them [...]” (\citealt[31]{langemets_translations_2005}, our emphasis). Schematically, the “translationally derived features” would then look as follows:
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img3.png}
+% \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img3.png}
 \begin{forest} for tree={grow'=east,align=center}
 [ heks\\{[}heks|hag{]}\\{[}heks|witch{]} [hag\\{[}hegs|hag{]}] [witch\\{[}heks|witch{]}]  ]
 \end{forest}
@@ -468,7 +468,7 @@ methods based on translational equivalence rely on the fact that the different s
 In machine translation (the field where WSD researchers initially got the idea for translational equivalence), “the ambiguity of a source word is [...] given by the number of target representations for that word in the bilingual lexicon of the translation system” \citep[132]{dagan_two_1991}. For example, if in a machine translation task, the correct sense of the English lexeme \textit{bank} needs to be selected, the \textit{conditio} \textit{sine} \textit{qua} \textit{non} to perform this task (correctly) is that the system disposes of the necessary information to differentiate between the different senses of \textit{bank.} The distinctive senses of \textit{bank} can be assigned to the lexeme “by producing all the [French] alternatives for the lexical relations involving [bank]” \citep[131]{dagan_two_1991}. The French translation \textit{banque} distinguishes the “financial institution” sense of \textit{bank}, whereas the French \textit{rive} reveals the “riverside” sense of \textit{bank.} Schematically, the sense assignment looks as follows:
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img4.png}
+% \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img4.png}
 \begin{forest}for tree={grow=east,align=center}
     [bank  [\textit{rive}\\{[}riverside{]}] [~~~~~~~~~~~~~~~~~~~~,name=dummy,no edge [bank\\{[}\textit{banque}{],} {[}\textit{river}{]},base=center,edge=->]] [\textit{banque}\\{[}financial institution{]}] ]
 \end{forest}
@@ -480,7 +480,7 @@ Given that the lexeme \textit{bank} now disposes of two possible senses, it has 
 Not all ambiguities can be resolved through ‘simple’ translational equivalence. For instance, at least two senses of the Dutch lexeme \textit{school} cannot be disambiguated while using English translations: the “educational institution” sense of Dutch \textit{school} translates in English as \textit{school,} and also the “group of fishes” sense of Dutch \textit{school} translates into English as \textit{school,} hence, ambiguity remains unresolved (\figref{fig:key:6}). In these cases, it is proposed to add a third language \citep[132]{dagan_two_1991}. In this particular case, adding French would help, as the “group of fishes” sense translates in French as \textit{banc,} and would reveal this additional sense (\figref{fig:key:7}).
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img5.png}
+% \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img5.png}
 \begin{forest} for tree={grow=east,align=center}
 [school\textsubscript{Du} [\textit{school}\textsubscript{Eng}\\{[}group of fishes{]}] [~~~~~~~~~~~~~~~~~~~~,name=dummy,no edge [school\textsubscript{Du}\\{[}\textit{school}{],} {[}\textit{school}{]},base=center,edge=->]]  [\textit{school}\textsubscript{Eng}\\ {[}Educational institution{]}] ]
 \end{forest}
@@ -488,7 +488,7 @@ Not all ambiguities can be resolved through ‘simple’ translational equivalen
 \end{figure}
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img6.png}
+% \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img6.png}
 \begin{forest} for tree={grow=east,align=center}
 [school\textsubscript{Du}\\\vphantom{jh}~ [\textit{banc}\textsubscript{Fr}\\{[}group of fishes{]}] [\textit{school}\textsubscript{Eng}\\{[}group of fishes{]},base=center [school\textsubscript{Du}\\{[}\textit{school}{],} {[}\textit{school, banc}{]},base=center,edge=->]]  [\textit{school}\textsubscript{Eng}\\ {[}Educational institution{]}] ]
 \end{forest}
