@@ -21,7 +21,7 @@ The visualizations of semantic fields in this work will correspond to the visual
 
 \section{The Dutch Parallel Corpus}
 \label{sec:3.3}
-All data for this study are drawn from the Dutch Parallel Corpus (DPC), which was developed as part of the STEVIN program. The primary goal of this program was “to set up an effective digital language infrastructure for Dutch, and to carry out strategic research in the field of language and speech technology for Dutch” \todo{REF unclear}\citep[1]{Spyns2013}. The DPC is a ten-million-word, sentence aligned, both parallel and comparable corpus (it is de facto a parallel corpus which can also be used as a comparable corpus). Within Laviosa’s terminological apparatus (presented in \sectref{sec:2.2.1.3}), the DPC can be described as a multi-source, parallel multilingual corpus. ‘Multi-source’ since Dutch, French and English can all three be the source language of the texts in the corpus (and also the target language); ‘parallel’ because the texts in one language are the originals of the translations in the other language; and ‘multilingual’ because more than two languages are involved.
+All data for this study are drawn from the Dutch Parallel Corpus (DPC), which was developed as part of the STEVIN program. The primary goal of this program was “to set up an effective digital language infrastructure for Dutch, and to carry out strategic research in the field of language and speech technology for Dutch” \citep[1]{Spyns2013}. The DPC is a ten-million-word, sentence aligned, both parallel and comparable corpus (it is de facto a parallel corpus which can also be used as a comparable corpus). Within Laviosa’s terminological apparatus (presented in \sectref{sec:2.2.1.3}), the DPC can be described as a multi-source, parallel multilingual corpus. ‘Multi-source’ since Dutch, French and English can all three be the source language of the texts in the corpus (and also the target language); ‘parallel’ because the texts in one language are the originals of the translations in the other language; and ‘multilingual’ because more than two languages are involved.
 
 The DPC offers a number of indisputable advantages. With respect to corpus size the DPC is, to my knowledge and at the time of writing, the largest available parallel corpus of Dutch. It is furthermore balanced with respect to five text types (external communication, journalistic texts, instructive texts, administrative text, fictional and non-fictional literature) and four translation directions (Dutch to French, French to Dutch, Dutch to English and English to Dutch). Only for the text type literary texts, the corpus is not strictly balanced according to translation direction, but only according to language pair \citep[187]{spyns_dutch_2013}. The five text types on the so-called superordinate level are further subdivided into 19 basic levels, but the latter have “no further implications for the balancing of the corpus” \citep[378]{macken_dutch_2011}. Each text type accounts for 2,000,000 words and within each text type, each translation direction contains 500,000 words \citep[376-378]{macken_dutch_2011}. All text files consist of written text material (no data carriers other than text files are included), but no distinction is made in the DPC between “spoken” text material and “written” text material \citep[59]{delaere_translations_2015}, although available meta-data indeed allow the user to identify the spoken text material as such and to distinguish between texts “written to be read”, “written to be spoken” or  “written reproduction[s] of spoken language” \citep[59]{delaere_translations_2015}. It is important to keep in mind that the spoken text material in the DPC is categorized under the superordinate text type level administrative texts \citep[59]{delaere_translations_2015}, together with written text material. Divergent results for the text type administrative texts in a corpus study focusing on genre specific phenomena could thus be due to the invisible inclusion of this parameter into the text type. The DPC further offers the possibility to differentiate between “regional language varieties” \citep[48]{delaere_translations_2015} such as Belgian Dutch and Netherlandic Dutch, Belgian French and French French and British English and American English. It is also important to add that the DPC is built up of complete texts, not of samples and that the DPC is a ‘closed’ corpus, meaning that no data are added any further to the corpus.
 
@@ -47,8 +47,8 @@ In this section, I will first present the work flow of the SMM\footnote{The SMM 
 \label{sec:3.4.1}
 Dyvik starts from an initial polysemous lexeme \textit{a} in Language A and extracts all its translations in Language B manually from the English-Norwegian Parallel Corpus (ENPC), a sentence-aligned corpus. He calls this set of translations the first T-image of \textit{a} in Language B\footnote{For the sake of clarity, I have added the adjective “first” here. “The First T-image” thus refers to what Dyvik himself calls \textit{the} \textit{t-image}. The \textit{Inverse} \textit{t-image} and \textit{Second} \textit{t-image} are the exact names given by Dyvik to the following steps in the SMM.} . Then, commensurably, the translations back in Language A (the back-translations) of the first T-image (themselves translations from \textit{a}) are looked up. This is called the inverse T-image of \textit{a} in Language A. Finally, the initial procedure is applied a second time: the translations in Language B of the inverse T-image lexemes in Language A are retrieved (this is called the second T-image). Schematically, we could represent the work flow as follows:
 
-\begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img7.jpg}
+\begin{figure}[h]
+%\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img7.jpg}
 \begin{tikzpicture}
 \usetikzlibrary{arrows.meta,positioning,decorations.markings} 
 \tikzset{
@@ -188,12 +188,6 @@ The first T-images \textit{banque} and \textit{banc} only share \textit{bank} on
 \label{sec:3.4.3.2}
 Looking at the first T-images \textit{banc} and \textit{fauteuil} (Figures 12 and 13), we see that \textit{banc} is connected to \textit{bank,} \textit{sofa,} \textit{zetel} and \textit{leunstoel} in the inverse T-image (\figref{fig:3:12}), and that \textit{fauteuil} is connected to \textit{bank,} \textit{sofa,} \textit{zetel} and \textit{leunstoel} in the inverse T-image (\figref{fig:3:13}). In their inverse T-images, \textit{banc} and \textit{fauteuil} share, apart from \textit{bank}, also \textit{sofa,} \textit{zetel} and \textit{leunstoel}. \textit{Banc} and \textit{fauteuil} are thus directly connected by means of intersections with other sets: they do not only share \textit{bank} in the inverse T-image, they also share \textit{sofa,} \textit{zetel} and \textit{leunstoel}, proving the closer semantic relatedness of \textit{banc} and \textit{fauteuil}, and also showing that \textit{bank,} \textit{sofa,} \textit{zetel} and \textit{leunstoel} are semantically related.
 
-\todo[inline]{Fig 3.5 and 3.4 are duplicates?}
-\begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img11.png}
-\caption{\label{fig:3:12}  Inverse T-image of \textit{banc}}
-\end{figure}
-
 \begin{figure}
 % \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img12.png}
 \begin{tikzpicture}
@@ -268,7 +262,7 @@ Non-translated Dutch and translated Dutch need to be represented by separate set
 
 \begin{table}
 \caption{\label{tab:3:1} Source and target language in the different steps of the SMM}
-\includegraphics[width=\textwidth]{figures/Vandevoorde2-img14.png}
+%\includegraphics[width=\textwidth]{figures/Vandevoorde2-img14.png}
 
 \fittable{
 \begin{tabular}{llll}
@@ -858,12 +852,12 @@ Conclusively, the following observations can be made on the basis of this prelim
 
 \subsection{Hierarchical Cluster Analysis}
 \label{sec:3.7.2}  
-Hierarchical Cluster Analysis (HCA) can be defined as “a collection of different algorithms that puts objects into clusters according to well-defined similarity rules” and is “mostly used when we do not have any a priori hypotheses” \citep[406]{glynn_cluster_2014}. In this section, I will first describe which type of cluster analysis seems the best choice for this study. In addition, as every cluster analysis is crucially dependent on both a particular similarity measure and clustering algorithm, I will elaborate on these measures in \sectref{sec:3.7.2.1} and \sectref{sec:3.7.2.2} respectively. Next, I will explain the procedure for determining the number of clusters for which I will rely on the R package pvclust \citep{suzuki_pvclust:_2006} (\sectref{sec:3.7.2.3}). Finally, I propose a validation of the combined choice of a particular similarity measure and clustering algorithm and of the number of clusters in the cluster solution (\sectref{sec:3.7.3.4}\todo{No such section})\footnote{Exhaustive overviews of the existing clustering techniques can be found in \citet[495-523]{manning_foundations_1999}, \citet[138-148]{baayen_analyzing_2008},  \citet[71-110]{everitt_cluster_2011}, \citet[336-349]{gries_statistics_2013} and \citet{glynn_cluster_2014}.}.
+Hierarchical Cluster Analysis (HCA) can be defined as “a collection of different algorithms that puts objects into clusters according to well-defined similarity rules” and is “mostly used when we do not have any a priori hypotheses” \citep[406]{glynn_cluster_2014}. In this section, I will first describe which type of cluster analysis seems the best choice for this study. In addition, as every cluster analysis is crucially dependent on both a particular similarity measure and clustering algorithm, I will elaborate on these measures in \sectref{sec:3.7.2.1} and \sectref{sec:3.7.2.2} respectively. Next, I will explain the procedure for determining the number of clusters for which I will rely on the R package pvclust \citep{suzuki_pvclust:_2006} (\sectref{sec:3.7.2.3}). Finally, I propose a validation of the combined choice of a particular similarity measure and clustering algorithm and of the number of clusters in the cluster solution (\sectref{sec:3.7.2.4})\footnote{Exhaustive overviews of the existing clustering techniques can be found in \citet[495-523]{manning_foundations_1999}, \citet[138-148]{baayen_analyzing_2008},  \citet[71-110]{everitt_cluster_2011}, \citet[336-349]{gries_statistics_2013} and \citet{glynn_cluster_2014}.}.
 
-Just as semantic spaces are customary in computational semantics, in (cognitive) linguistics, “[c]luster analyses have been used to determine the similarity of intraword senses or the degree of granularity exhibited by polysemous word senses (cf. \citealt{steinberg_empirical_1971,sandra_network_1995,putz_prepositional_1996})” (\todo{REF unclear}\citealt[81]{Gries2006b}). The method has also been extensively used by Gries and Divjak (see for example \citealt{divjak_ways_2006, divjak_structuring_2010,glynn_cluster_2014,divjak_ways_2006, evans_behavioral_2009,Gries2006,evans_behavioral_2009,gries_behavioral_2010,deshors_case_2014})\todo{REF unclear}. The reasons for HCA’s popularity are summarized by Divjak:
+Just as semantic spaces are customary in computational semantics, in (cognitive) linguistics, “[c]luster analyses have been used to determine the similarity of intraword senses or the degree of granularity exhibited by polysemous word senses (cf. \citealt{steinberg_empirical_1971,sandra_network_1995,putz_prepositional_1996})” (\citealt[81]{Gries2006b}). The method has also been extensively used by Gries and Divjak (see for example \citealt{divjak_ways_2006, divjak_structuring_2010,glynn_cluster_2014,divjak_ways_2006, evans_behavioral_2009,Gries2006,evans_behavioral_2009,gries_behavioral_2010,deshors_case_2014})\todo{REF unclear}. The reasons for HCA’s popularity are summarized by Divjak:
 
 \begin{quote}
-Cluster analysis is one of the basic exploratory techniques that are often applied in analyzing large data sets. This statistical method helps organize observed data into meaningful structures: it finds similarities between elements and groups similar elements together. These groupings, in turn, assist in understanding relationships that might exist among these elements. In other words: cluster analysis finds the most optimal solution and organizes an enormous number of data in substructures that facilitate comparison of the (elements in the) structures to each other (Divjak, 2010, 129-130).\todo[inline]{REF unclear}
+Cluster analysis is one of the basic exploratory techniques that are often applied in analyzing large data sets. This statistical method helps organize observed data into meaningful structures: it finds similarities between elements and groups similar elements together. These groupings, in turn, assist in understanding relationships that might exist among these elements. In other words: cluster analysis finds the most optimal solution and organizes an enormous number of data in substructures that facilitate comparison of the (elements in the) structures to each other \citep[129-130]{Divjak2010}.
 \end{quote}
 
 HCA is not a single technique, but covers “a family of techniques for clustering data and displaying them in a tree-like format” \citep[138]{baayen_analyzing_2008}. In Statistical NLP, HCA has two main uses: exploratory data analysis on the one hand and generalization on the other hand \citep[497]{manning_foundations_1999}. The tree-like format in which the result of a clustering algorithm can be visually represented is called a dendrogram:
@@ -1124,6 +1118,9 @@ The prototype-based organization of the clusters within each dendrogram will be 
 
 The coordinates of the cluster center (the centroid) are calculated on the output of the CA (i.e. the coordinates of the CA) with the built-in function centers\_ca() from the svs{}-package. Next, the Euclidean distance from each centroid to the zero-point of the semantic space is calculated with the helper function dist\_wrt() from svs. Finally, the distances of the centroids to the origin of the semantic space are visualized with a dot chart. The example in \figref{fig:3:48} shows the distance of each of the clusters in the HAC visualization for SourceDutch to the origin of the semantic space. Since the zero-point of the semantic space is held to be the prototypical center, clusters that are closer to the zero-point of the semantic space are considerd as more prototypical and clusters further away from the zero-point as more peripheral. 
 
+\begin{figure}
+\includegraphics[height=.4\textheight]{figures/Vandevoorde2-img48.png}
+\scriptsize
 \begin{tabular}{ll}
 \lsptoprule
 Cluster 6 & eerst\\
@@ -1133,10 +1130,8 @@ Cluster 3 & Starten, van start gaan, opstarten, beginnen, gaan\\
 Cluster 2 & aanvang, begin, start\\
 Cluster 1 & opzetten, oprichten\\
 \lspbottomrule
-\end{tabular}\todo{Where does this table belong?}
-
-\begin{figure}
-\includegraphics[height=.4\textheight]{figures/Vandevoorde2-img48.png}
+\end{tabular}
+\normalsize
 \caption{\label{fig:3:48}  Dot chart presenting the distance of the cluster centroids to the zero-point of the semantic space of SourceDutch}
 \end{figure}
 
