@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="177.93236"
+     inkscape:cx="179.95267"
      inkscape:cy="441.93657"
      inkscape:document-units="px"
      inkscape:current-layer="layer14"
@@ -58,18 +58,17 @@
      id="layer12"
      inkscape:label="orig"
      transform="translate(-485.35718,-588.64795)"
-     style="opacity:0.582">
+     style="display:none;opacity:0.58200001">
     <image
        sodipodi:absref="/home/snordhoff/versioning/git/langsci/books/vandevoorde/194/figures/Vandevoorde2-img36.png"
        xlink:href="Vandevoorde2-img36.png"
-       style=""
-       transform="matrix(0,1,-1,0,0,0)"
-       width="636"
-       height="675"
-       preserveAspectRatio="none"
-       id="image7181"
+       y="-1160.3572"
        x="588.64795"
-       y="-1160.3572" />
+       id="image7181"
+       preserveAspectRatio="none"
+       height="675"
+       width="636"
+       transform="matrix(0,1,-1,0,0,0)" />
   </g>
   <g
      inkscape:groupmode="layer"
