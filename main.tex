@@ -6,7 +6,7 @@
             colorlinks,citecolor=brown,
             draftmode
 		  ]{langsci/langscibook}     
-  
+   
 
 % WARNINGS FOR HYPERREF AND TOCSTYLE DISABLED IN langscibook.cls!
 \WarningFilter{latexfont}{Font shape}
@@ -16,24 +16,19 @@
 \WarningFilter{hyperref}{Token not allowed in a PDF string (Unicode):}
 \WarningFilter{biblatex}{'babel/polyglossia' detected but 'csquotes' missing}
 \WarningFilter{./langsci/styles/langsci-gb4e}{You have requested} 
-\WarningFilter{microtype}{Unknown} 
-
+\WarningFilter{microtype}{Unknown}  
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%          additional packages                 %%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
-\bibliography{localbibliography} 
-
+\bibliography{localbibliography}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Frontmatter                      %%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-\begin{document}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\begin{document} 
 \input{localcommands.tex}  
 \input{localcounters.tex}  
   
@@ -45,8 +40,7 @@
 \include{chapters/preface}  
 \include{chapters/acknowledgments}  
 \include{chapters/abbreviations}    
-\mainmatter          
-  
+\mainmatter           
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Chapters                         %%% 
@@ -57,14 +51,11 @@
 \include{chapters/04}  
 \include{chapters/05}  
 \include{chapters/06} 
-\include{chapters/appendix}
-  
-
+% \include{chapters/appendix}
+   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Backmatter                       %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% \input{localseealso.tex}  
-% There is normally no need to change the backmatter section
-% \input{backmatter.tex} %
-
+% \input{localseealso.tex}   
+% \input{backmatter.tex} % 
 \end{document}
