@@ -45,9 +45,9 @@ In this section, I will first present the work flow of the SMM\footnote{The SMM 
 
 \subsection{Work flow of the SMM}
 \label{sec:3.4.1}
-Dyvik (\citep{johansson_translational_1998}) starts from an initial polysemous lexeme \textit{a} in Language A and extracts all its translations in Language B manually from the English-Norwegian Parallel Corpus (ENPC), a sentence-aligned corpus. He calls this set of translations the first T-image of \textit{a} in Language B\footnote{For the sake of clarity, I have added the adjective “first” here. “The First T-image” thus refers to what Dyvik himself calls \textit{the} \textit{t-image} (\citep{johansson_translational_1998}). The \textit{Inverse} \textit{t-image} and \textit{Second} \textit{t-image} are the exact names given by Dyvik to the following steps in the SMM (\citep{johansson_translational_1998}).} . Then, commensurably, the translations back in Language A (the back-translations) of the first T-image (themselves translations from \textit{a}) are looked up. This is called the inverse T-image of \textit{a} in Language A. Finally, the initial procedure is applied a second time: the translations in Language B of the inverse T-image lexemes in Language A are retrieved (this is called the second T-image). Schematically, we could represent the work flow as follows:
+Dyvik (\citep{johansson_translational_1998}) starts from an initial polysemous lexeme \textit{a} in Language A and extracts all its translations in Language B manually from the English-Norwegian Parallel Corpus (ENPC), a sentence-aligned corpus. He calls this set of translations the first T-image of \textit{a} in Language B\footnote{For the sake of clarity, I have added the adjective “first” here. “The First T-image” thus refers to what Dyvik himself calls \textit{the} \textit{t-image} (\citep{johansson_translational_1998}). The \textit{Inverse} \textit{t-image} and \textit{Second} \textit{t-image} are the exact names given by Dyvik to the following steps in the SMM (\citep{johansson_translational_1998}).} . Then, commensurably, the translations back in Language A (the back-translations) of the first T-image (themselves translations from \textit{a}) are looked up. This is called the inverse T-image of \textit{a} in Language A. Finally, the initial procedure is applied a second time: the translations in Language B of the inverse T-image lexemes in Language A are retrieved (this is called the second T-image). Schematically, we could represent the work flow as in \figref{fig:3:8}.
 
-\begin{figure}[h]
+\begin{figure}
 %\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img7.jpg}
 \begin{tikzpicture}
 \usetikzlibrary{arrows.meta,positioning,decorations.markings} 
@@ -57,18 +57,18 @@ Dyvik (\citep{johansson_translational_1998}) starts from an initial polysemous l
            text width=8em,
            minimum height=2em,
            text centered,
-           font=\large\bf},
+           font=\bfseries},
     explanation/.style={
            rectangle,
            text width=9em,
            minimum height=2em,
            text centered,
-           font=\small\it},
+           font=\itshape},
     % Define arrow style
     arrow/.style= {
            ->,
-           -{Latex[length=15pt,width=10pt]},
-           line width=4pt,
+           -{Latex[length=7pt,width=5pt]},
+           line width=2pt,
            rounded corners=40pt
     }
 }
@@ -84,8 +84,7 @@ Dyvik (\citep{johansson_translational_1998}) starts from an initial polysemous l
 \draw[arrow](first.west) -|  (inverse.north);
 \draw[arrow](inverse.east) -| (second.north);
 \end{tikzpicture}
-
-\caption{\label{fig:3:8}  Work flow of the SMM}
+\caption{\label{fig:3:8}Work flow of the SMM}
 \end{figure}
 
 \subsection{Prerequisites and assumptions}
@@ -134,10 +133,10 @@ When the SMM is applied to an initial lexeme, three types of word sense relation
                               edge (SMM-3-3)
                               edge (SMM-3-4)
                               edge (SMM-3-6);
-    \node[left=.5cm of SMM-1-1.west,] {\scshape initial lexeme};
-    \node[left=.5cm of SMM-2-1.west,] {\scshape first t-image};
-    \node[left=.5cm of SMM-3-1.west,] {\scshape inverse t-image};
-\end{tikzpicture} 
+    \node[left=.5cm of SMM-1-1.west,align=left] {\scshape initial\\lexeme};
+    \node[left=.5cm of SMM-2-1.west,align=left] {\scshape first\\t-image};
+    \node[left=.5cm of SMM-3-1.west,align=left] {\scshape inverse\\t-image};
+\end{tikzpicture}
 \caption{\label{fig:3:9}Example of the (ficticious) SMM of \textit{bank}}
 \end{figure}
 
@@ -361,7 +360,7 @@ In this section, the SMM++ retrieval task is applied to obtain data sets which c
 
 The first mirroring will be carried out with English as a Language B, the second mirroring with French as a Language B. The second T-image of \textit{beginnen} with English as a Language B and the second T-image of \textit{beginnen} with French as a Language B will be joined into one data set SourceDutch. The inverse T-image of \textit{beginnen} with English as a Language B will result in the data set TransDutch\textsubscript{ENG}, the inverse T-image of \textit{beginnen} with French as a Language B will result in the data set TransDutch\textsubscript{FR}.
 
-\subsection{ First T-images of beginnen\textsubscript{ENG}\textsubscript{} and beginnen\textsubscript{FR}}\footnotemark{}\label{sec:3.6.1} \footnotetext{ Beginnen\textsubscript{ENG} refers to the semantic mirroring initiated by the initial lexeme \textit{beginnen} and with English as a language B. Beginnen\textsubscript{FR} refers to the semantic mirroring initiated by the initial lexeme \textit{beginnen} and with French as a language B.}
+\subsection[First T-images of beginnen\textsubscript{ENG} and beginnen\textsubscript{FR}]{First T-images of beginnen\textsubscript{ENG} and beginnen\textsubscript{FR}\protect\footnote{Beginnen\textsubscript{ENG} refers to the semantic mirroring initiated by the initial lexeme \textit{beginnen} and with English as a language B. Beginnen\textsubscript{FR} refers to the semantic mirroring initiated by the initial lexeme \textit{beginnen} and with French as a language B.}}\label{sec:3.6.1}
 
 The SMM++ was first carried out with English as a pivot language. Attestations of the Dutch verb \textit{beginnen} were queried in the DPC via the interface developed by \citet[62]{delaere_translations_2015}. A lemma-based query was carried out rendering all sentences with \textit{beginnen} in any of its inflected forms. From the 1,867 resulting observations, 382 fulfilled the criterion of translation direction (Dutch as a source language, English as a target language). Each of the 382 sentences was manually annotated, meaning that the translation of \textit{beginnen} was recorded for every sentence. For the example (1) below, \textit{take} \textit{up} was annotated as the translation of \textit{beginnen}:
 
