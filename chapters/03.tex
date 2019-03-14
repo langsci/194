@@ -404,7 +404,7 @@ SOURCE: Terwijl de Europese Unie zich stilaan begint op te maken om 10 nieuwe li
 \end{styleVoorbeeld}
 
 
-In this particular example \textit{zich} \textit{opmaken} is translated by \textit{to} \textit{prepare} and \textit{stilaan} is translated by \textit{gradually}. The verb \textit{beginnen} is not translated lexically here; instead its translation is couched in the structure ‘to be+ing-form’ applied to the verb \textit{to} \textit{prepare}. Observations where an inchoative verb is translated by a syntactic structure such as 'to be+ing-form' were excluded for further analysis. Although annotation was perfectly possible on the technical side, the inchoative aspect of the structure ‘to be+ing-form’ is often very subtle \citep{smith_parameter_1997} and open for debate, as the following example (4) clarifies:
+In this particular example \textit{zich} \textit{opmaken} is translated by \textit{to} \textit{prepare} and \textit{stilaan} is translated by \textit{gradually}. The verb \textit{beginnen} is not translated lexically here; instead its translation is couched in the structure ‘to be+ing-form’ applied to the verb \textit{to} \textit{prepare}. Observations where an inchoative verb is translated by a syntactic structure such as `to be+ing-form' were excluded for further analysis. Although annotation was perfectly possible on the technical side, the inchoative aspect of the structure ‘to be+ing-form’ is often very subtle \citep{smith_parameter_1997} and open for debate, as the following example (4) clarifies:
 
 
 \begin{itemize}
@@ -715,10 +715,10 @@ TARGET: We zijn trouwens volop bezig tools te ontwikkelen om deze community van 
 
 \begin{itemize}
 \item \begin{styleVoorbeeld}
-SOURCE: La marque de jeans Diesel a, par exemple, lancé un concours aux membres de Facebook, par le biais d'une application, baptisée 'comment vivez-vous avec votre Diesel?' [The jeans brand Diesel has, for example, launched a contest for its Facebook members, via an application baptized ‘how do you live with your Diesel?'].
+SOURCE: La marque de jeans Diesel a, par exemple, lancé un concours aux membres de Facebook, par le biais d'une application, baptisée `comment vivez-vous avec votre Diesel?' [The jeans brand Diesel has, for example, launched a contest for its Facebook members, via an application baptized ‘how do you live with your Diesel?'].
 \end{styleVoorbeeld}\end{itemize}
 \begin{styleVoorbeeld}
-TARGET: Zo ontwikkelde het jeansmerk Diesel een applicatie voor een wedstrijd onder Facebookleden, 'hoe leef jij met je Diesel?'. [The jeans brand Diesel developed an application for a contest amongst Facebook members, ‘how do you live with your Diesel?’].
+TARGET: Zo ontwikkelde het jeansmerk Diesel een applicatie voor een wedstrijd onder Facebookleden, `hoe leef jij met je Diesel?'. [The jeans brand Diesel developed an application for a contest amongst Facebook members, ‘how do you live with your Diesel?’].
 \end{styleVoorbeeld}
 
 
@@ -911,7 +911,7 @@ Ward’s Minimum Variance Method is a somewhat different clustering algorithm as
 
 The above mentioned algorithms can themselves be grouped according to the different views on clusters they reflect. Depending on the goals one defines, different types of clusters can be found useful. \citet[493--495]{tan_introduction_2006} distinguish five types of cluster solutions: well-separated clusters (each object in a cluster is closer or more similar to every other object in the cluster than to any object not in the cluster), prototype-based clusters (each object in the cluster is closer or more similar to the prototype that defines the cluster than to the prototype of any other cluster), graph-based clusters (nodes are seen as objects; the links represent connections among the objects), density-based clusters (a cluster is seen as a dense region of objects surrounded by a region of low density) and shared-property clusters (also called conceptual clusters, where a cluster is a set of objects that share some property). Single-linkage, complete-linkage and average-linkage algorithms suit a graph-based view of clusters; Ward’s Method, on the other hand, is the more natural choice when one adheres a prototype-based view on clusters, since it “assumes that a cluster is represented by its centroid [...]” \citep[517]{tan_introduction_2006}.
 
-Which cluster algorithm is the ``right'' one for this purpose, is not a trivial question, as different algorithms yield different dendrograms. \citet[132]{divjak_structuring_2010}, following \citet[35]{speece_cluster_1994} emphasizes choosing the algorithms whose “ 'side-effects' of the mathematical properties [...] fit the phenomenon under investigation, and, consequently, yield easily interpretable results”. 
+Which cluster algorithm is the ``right'' one for this purpose, is not a trivial question, as different algorithms yield different dendrograms. \citet[132]{divjak_structuring_2010}, following \citet[35]{speece_cluster_1994} emphasizes choosing the algorithms whose “``side-effects'' of the mathematical properties [...] fit the phenomenon under investigation, and, consequently, yield easily interpretable results”. 
 
 The single-linkage method is discarded because of its tendency to produce a chaining effect. For the other cluster algorithms, however, it is not so clear which method is preferable. From the previous descriptions, Ward’s Method seems to suit my needs best: it can yield small clusters – as a “side-effect of its mathematical properties” – and it reflects a prototype-based view on clusters. The choice of Ward’s Minimum Variance method is also what results from the comparison with the complete and average-linkage methods in \sectref{sec:3.7.2.4}. HAC is carried out on the output of the CA with the function \texttt{pvclust()} from the package pvclust which relies on the function \texttt{hclust()} (the choice of pvclust will be substantiated in the next section).
 
