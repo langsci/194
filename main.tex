@@ -2,12 +2,17 @@
 %%%     Language Science Press Master File       %%%
 %%%         follow the instructions below        %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\documentclass[output=book,modfonts,nonflat,
-            colorlinks,citecolor=brown,
-            draftmode
-		  ]{langsci/langscibook}     
+\documentclass[
+     output=book
+    ,modfonts
+    ,nonflat
+    ,colorlinks
+    ,citecolor=brown
+    ,draftmode
+    ,arseneau
+    ,nobabel
+]{langsci/langscibook}     
    
-
 % WARNINGS FOR HYPERREF AND TOCSTYLE DISABLED IN langscibook.cls!
 \WarningFilter{latexfont}{Font shape}
 \WarningFilter{hyperref}{XeTeX driver}
@@ -28,7 +33,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Frontmatter                      %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-% \includeonly{chapters/appendix}
+% % \includeonly{chapters/03,chapters/04}
 \begin{document} 
 \input{localcommands.tex}  
 \input{localcounters.tex}  
