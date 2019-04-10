@@ -142,7 +142,7 @@ When the SMM is applied to an initial lexeme, three types of word sense relation
 
 \subsubsection{Unrelated word senses}
 \label{sec:3.4.3.1}
-The set of translations back into Dutch (the inverse T-image) of \textit{banque} and \textit{banc} only share the initial lexeme \textit{bank} itself in the inverse T-image. \textit{Banque} (\figref{fig:3:10}) is connected in the inverse T-image (i.e. ‘can be translated back into Dutch as’) to \textit{bank} and \textit{financiële} \textit{instelling.} As a consequence, it could be stated that the inverse T-image\textit{s} \textit{bank} and \textit{financiële} \textit{instelling} are semantically related to each other (via \textit{banque}):
+The set of translations back into Dutch (the inverse T-image) of \textit{banque} and \textit{banc} only share the initial lexeme \textit{bank} itself in the inverse T-image. \textit{Banque} (\figref{fig:3:10}) is connected in the inverse T-image (i.e. can be translated back into Dutch as) to \textit{bank} and \textit{financiële} \textit{instelling.} As a consequence, it could be stated that the inverse T-image\textit{s} \textit{bank} and \textit{financiële} \textit{instelling} are semantically related to each other (via \textit{banque}):
 
 \begin{figure}
 % \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img9.png}
@@ -468,7 +468,7 @@ Source language lexeme(s) & \multicolumn{4}{l}{beginnen}\\
 \end{tabularx}
 \end{table}
 
-The retrieval task of the SMM++ was also carried out with French as a pivot language. \tabref{tab:3:7} summarizes the information of the first T-image of beginnen\textsubscript{FR}:
+The retrieval task of the SMM++ was also carried out with French as a pivot language. \tabref{tab:3:7} summarizes the information of the first T-image of beginnen\textsubscript{FR}.
 
 \begin{table}
 \caption{First T-image of beginnen\textsubscript{FR}\label{tab:3:7}}
@@ -500,7 +500,7 @@ Source language lexeme(s) & \multicolumn{4}{l}{beginnen}\\
 
 \subsection{Inverse T-images of beginnen\textsubscript{ENG} and beginnen\textsubscript{FR}}
 \label{sec:3.6.2}
-The next step of the SMM++ consists in querying the lexemes from the first T-image as source language lexemes in the DPC. For beginnen\textsubscript{ENG}, all English sentences containing each of the 9 lexemes from the first T-image are queried, only those sentences where English is the source language and Dutch the target language are selected. For each observation, the translation back into Dutch of the lexeme is annotated, which leads to the summary in \tabref{tab:3:8}:
+The next step of the SMM++ consists in querying the lexemes from the first T-image as source language lexemes in the DPC. For beginnen\textsubscript{ENG}, all English sentences containing each of the 9 lexemes from the first T-image are queried, only those sentences where English is the source language and Dutch the target language are selected. For each observation, the translation back into Dutch of the lexeme is annotated, which leads to the summary in \tabref{tab:3:8}. \tabref{tab:3:9} summarizes the results of the inverse T-image of beginnen\textsubscript{FR}.
 
 \begin{table}
 \caption{Inverse T-image beginnen\textsubscript{ENG}\label{tab:3:8}}
@@ -535,8 +535,6 @@ Source language lexeme(s) & 1. & beginning (n) & 5. & to open \\
 \lspbottomrule
 \end{tabularx}
 \end{table}
-
-\tabref{tab:3:9} summarizes the results of the inverse T-image of beginnen\textsubscript{FR}:
 
 \begin{table}
 \caption{Inverse T-image of beginnen\textsubscript{FR}\label{tab:3:9}}
@@ -611,7 +609,7 @@ A second observation which can be made here is that the final selection of data 
 
 \subsection{Second T-images of beginnen\textsubscript{ENG}\textsubscript{} and beginnen\textsubscript{FR}}
 \label{sec:3.6.3}
-The following step of the SMM++ consists of querying the lexemes from the inverse T-image as Dutch source language lexemes in the DPC. For beginnen\textsubscript{ENG}, the translation back into English of each selected observation of one of the 24 source lexemes is annotated. Recall that the data in the second T-image are selected according to an additional restriction, i.e. translations have to be identical to one of the source language lexemes of the inverse T-image. In practice, there are two implications of this additional restriction for the data set beginnen\textsubscript{ENG}. First, the total number of selected observations is 17 times smaller than the (enormous) total number of queried observations,\footnote{In order to cope with the vast number of observations, a preliminary statistical word alignment using GIZA++ was carried out. Every statically word-aligned observation was subsequently manually verified. The author wants to thank Els Lefever for her precious help with statistical word alignment.} and second, one source language lexeme \textit{allereerst} had to be discarded because its back-translations into English did not match any of the 9 selected target language lexemes (a problem most probably due to corpus size). These final results of the mirroring are summarized in \tabref{tab:3:10}:
+The following step of the SMM++ consists of querying the lexemes from the inverse T-image as Dutch source language lexemes in the DPC. For beginnen\textsubscript{ENG}, the translation back into English of each selected observation of one of the 24 source lexemes is annotated. Recall that the data in the second T-image are selected according to an additional restriction, i.e. translations have to be identical to one of the source language lexemes of the inverse T-image. In practice, there are two implications of this additional restriction for the data set beginnen\textsubscript{ENG}. First, the total number of selected observations is 17 times smaller than the (enormous) total number of queried observations,\footnote{In order to cope with the vast number of observations, a preliminary statistical word alignment using GIZA++ was carried out. Every statically word-aligned observation was subsequently manually verified. The author wants to thank Els Lefever for her precious help with statistical word alignment.} and second, one source language lexeme \textit{allereerst} had to be discarded because its back-translations into English did not match any of the 9 selected target language lexemes (a problem most probably due to corpus size). These final results of the mirroring are summarized in \tabref{tab:3:10}.
 
 \begin{table}
 \caption{Second T-image of beginnen\textsubscript{ENG}\label{tab:3:10}}
@@ -646,7 +644,7 @@ Target language lexemes & 1. & beginning (n) & 5. & to open \\
 
 \footnotetext{The number between brackets indicates the total number of selected observations in the second T-image of beginnen\textsubscript{ENG}, the second number refers to the total number of observations for the second T-image of beginnen\textsubscript{ENG} after the selection of only those lexemes which are also members of the second T-image of beginnen\textsubscript{FR}.}
 
-\tabref{tab:3:11} recapitulates the results of the second T-image of beginnen\textsubscript{FR}:
+\tabref{tab:3:11} recapitulates the results of the second T-image of beginnen\textsubscript{FR}.
 
 \begin{table}
 \caption{Second T-image of beginnen\textsubscript{FR}\label{tab:3:11}}
