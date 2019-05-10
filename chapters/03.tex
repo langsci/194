@@ -1092,7 +1092,7 @@ The prototype-based organization of the clusters within each dendrogram will be 
 The coordinates of the cluster center (the centroid) are calculated on the output of the CA (i.e. the coordinates of the CA) with the built-in function \mbox{\texttt{centers\_ca()}} from the \texttt{svs}-package. Next, the Euclidean distance from each centroid to the zero-point of the semantic space is calculated with \mbox{\texttt{dist\_wrt()}}, a helper function from \texttt{svs}\todo{I moved ``helper function'' to avoid an ugly line break}. Finally, the distances of the centroids to the origin of the semantic space are visualized with a dot chart. The example in \figref{fig:3:48} shows the distance of each of the clusters in the HAC visualization for SourceDutch to the origin of the semantic space. Since the zero-point of the semantic space is held to be the prototypical center, clusters that are closer to the zero-point of the semantic space are considerd as more prototypical and clusters further away from the zero-point as more peripheral. 
 
 \begin{figure}
-\includegraphics[height=.4\textheight]{figures/Vandevoorde2-img48.png}
+\includegraphics[height=.4\textheight]{figures/Vandevoorde2-img48.png}\vspace*{\baselineskip}
 \scriptsize
 \begin{tabular}{l>{\itshape}l}
 \lsptoprule
@@ -1105,7 +1105,7 @@ Cluster 1 & opzetten{\normalfont,} oprichten\\
 \lspbottomrule
 \end{tabular}
 \normalsize
-\caption{\label{fig:3:48}  Dot chart presenting the distance of the cluster centroids to the zero-point of the semantic space of SourceDutch}
+\caption{\label{fig:3:48}Dot chart presenting the distance of the cluster centroids to the zero-point of the semantic space of SourceDutch}
 \end{figure}
 
 \subsubsection{Organization of the lexemes within each cluster}
@@ -1114,7 +1114,7 @@ The prototype-based organization of the different items (lexemes) within each cl
 
 \begin{figure}
 \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img49.png}
-\caption{\label{fig:3:49}  Dot chart representing the distance of the lexemes to the centroid of cluster n°4 for SourceDutch}
+\caption{\label{fig:3:49}Dot chart representing the distance of the lexemes to the centroid of cluster n°4 for SourceDutch}
 \end{figure}
 
 The stability of the cluster membership of each lexeme can also be determined on the basis of this analysis. HAC is categorized as hard clustering, which means that each object in the analysis can be assigned to only one cluster (in contrast to fuzzy clustering, which can reveal the degree of membership of an object to a cluster). By looking at the distance of the lexemes to their cluster’s centroid, the hard clustering is somewhat nuanced. The positions of the lexemes with respect to their centroid may show that some lexemes are ``hesitant'' between two clusters, and their assignment to a particular cluster is not as straightforward and clear-cut (as hard) as the dendrogram structure would have suggested. The centroid itself, however, is not a meaningful point\footnote{\citet[516]{manning_foundations_1999} point out that the centroid “is in most cases not identical to any of the objects”.} since it is the average of all points. Alternatively, it is possible to compute the medoid for each cluster, which is the particular point in the cluster with the smallest average distance to all other points \citep[164]{divjak_structuring_2010}. Everitt et al. \citep[113]{everitt_cluster_2011} note that the term medoid was coined by \citet{kaufman_finding_1990} by analogy with calling the group mean the centroid. The medoid “can be interpreted as a representative object or exemplar of the group” \citep[113]{everitt_cluster_2011} and is necessarily one object in the cluster; this object can then be considered as the “prototypical class member” \citep[516]{manning_foundations_1999} in a cluster. The medoid can be calculated with the \texttt{pam()}-function in R (``Partitioning around Medoids'').
