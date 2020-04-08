@@ -335,7 +335,7 @@ Although the integration of frequency information into the SMM makes it possible
 First, let us take a closer look at the problem of how to manage these (ever) expanding data sets within the retrieval task of the SMM. Translators come up with very creative solutions, even in non-fictional, non-literary texts. For example, within a corpus study this creativity results in the following: for a verb as ``basic'' as \textit{beginnen} `to begin', more than 47 different translations in English appear for a total of 382 translational pairs of sentences with \textit{beginnen} in the Dutch source text in the Dutch Parallel Corpus. It can be very interesting, both from a contrastive linguistic as from a translational perspective, to investigate all these instances, but it would not answer one of the main research questions of this book: how to compare semantic relationships in translated language and non-translated language. For this reason, I agree with Dyvik to exclude completely unpredictable translations – translators’ idiosyncracies – from our analysis. More specifically, I will apply a frequency threshold of three attestations for every translation, allowing me to work with a manageable number of possible translational pairs. This choice is motivated by pragmatic considerations. Firstly, a frequency threshold below three attestations generates additional manual annotation work, endangering the feasibility of the task. Solutions such as automatic word alignment with GIZA++ did not yield satisfying results due to insufficient corpus size, and word aligned parallel corpora are not available for the language pairs in this book. Secondly, with respect to the statistical processing of the data, \citet[133]{evert_statistics_2004} argues against the inclusion of hapax and dis legomena, providing an additional argument in favor of a frequency threshold of three observations:
 
 \begin{quote}
-[f]or the time being, however, we must assume that probability estimates and p-values for the lowest-frequency types are distorted in unpredictable ways. [...] [T]hese conclusions provide theoretical support for frequency cutoff thresholds. Data with cooccurrence frequency f < 3, i.e. the hapax and dis legomena, should always be excluded from the statistical analysis \citep[133]{evert_statistics_2004}.
+[f]or the time being, however, we must assume that probability estimates and $p$-values for the lowest-frequency types are distorted in unpredictable ways. [...] [T]hese conclusions provide theoretical support for frequency cutoff thresholds. Data with cooccurrence frequency f < 3, i.e. the hapax and dis legomena, should always be excluded from the statistical analysis \citep[133]{evert_statistics_2004}.
 \end{quote}
 
 A second restriction of the data is necessary to make sure that the data sets are also acceptably comparable. I will therefore respect the following rule of selection for data at the level of the second T-image (representing non-translated language): in the second T-image, an observation (source-target sentence pair holding the lexeme under investigation) will only be selected when the Language B translation is identical to one of the Language B source language lexemes of the inverse T-image (representing translated language). As a result, the row names and column variables of the data matrices in the inverse T-image (representing translated language) and the second T-image (representing non-translated language) will be identical, their difference will be in their status. In the frequency table representing non-translated language (SourceDutch), the rows are (Dutch) source language lexemes and the columns are (English or French) translations, in the frequency table representing translated language (TransDutch\textsubscript{ENG} or TransDutch\textsubscript{FR}), the rows are (Dutch) translations and the columns are (English or French) source language lexemes. Of course, the frequency counts in the tables will also be different (as illustrated by the difference between \tabref{tab:3:3} and \tabref{tab:3:4} for the fictitious example of \textit{bank}). A similar restriction was also suggested by \citet[60]{johansson_translational_1998} in order to eliminate those results which are unrelated to the initial lexeme. Shortly put: the lexemes which are members of each of the data sets selected for statistical analysis and further visualization are kept identical (the inverse T-image provides the lexemes for the semantic field of translated language, and the second T-image provides the lexemes for the semantic field of non-translated language), but the ``content'' (frequency information and translational status) of the data sets differs since source and target language are in fact inversed in the two sets of data. In this way, we solve \citeauthor{krzeszowski_contrasting_1990}'s semantic paradox which we are facing here that “what is identical is not subject to comparison, and what is different is not comparable” \citep[7]{krzeszowski_contrasting_1990}: we propose to select identical lexemes, but because of their translational status, both data sets are nonetheless different; we thus solve the paradox and make the two sets of data comparable to each other.
@@ -754,7 +754,7 @@ The initial map has as many dimensions as there are columns in the data matrix (
 
 \begin{figure}
 \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img16.png}
-\caption{Spatial map with n dimensions for \textit{beginnen} \label{fig:3:16}}
+\caption{Spatial map with $n$ dimensions for \textit{beginnen} \label{fig:3:16}}
 \end{figure}
 
 Now, in order to be able to visually present the specific geographic position of each of the Dutch lexemes in the rows, their position in the n-dimensional space is reduced to a two-dimensional space. All five Dutch lexemes can then be  represented as points in this space (\figref{fig:3:17}).
@@ -778,37 +778,25 @@ Next, the best fitting two-dimensional space is computed (\figref{fig:3:18}). Be
 
 What is immediately striking is the outlying position of \textit{vanaf}. Although the selection of lexemes has been done through a carefully developed technique, described in the previous sections, it is decided to exclude \textit{vanaf} from all data sets. Looking back at the frequency tables (the second T-images of \textit{beginnen}\textsubscript{ENG} and \textit{beginnen}\textsubscript{FR}, see Tables~\ref{appendix:E} and~\ref{appendix:F} in Appendix~\ref{ch:A}) for SourceDutch, it is indeed striking that \textit{vanaf} has, what can be called, an “unusual profile” \citep[92]{greenacre_correspondence_2007}: \textit{vanaf} is related to a single French target lexeme, i.e. \textit{à} \textit{partir} \textit{de}. In the second T-image of \textit{beginnen}\textsubscript{FR}, we also see that the relative weight of \textit{vanaf} is rather high (0.1505792; representing 15\% of the total number of observations) and contributing to a 0.1953608 – over 19\% – rise of the total inertia\footnote{“1. The (total) inertia of a table quantifies how much variation is present in the set of row profiles or in the set of column profiles […] 3. CA is performed with the objective of accounting for a maximum amount of inertia along the first axis. The second axis accounts for a maximum of the remaining inertia, and so on. […]” \citep[88]{greenacre_correspondence_2007}.} of the data matrix when compared to the same data matrix without \textit{vanaf}. The conclusion is that the variation of the first dimension is solely accounted for by \textit{vanaf}. \citet[92]{greenacre_correspondence_2007} indeed warns for the fact that outliers can “start to dominate a map so much that the more interesting contrasts between the more frequently occurring categories are completely masked”. The data points in the plot without \textit{vanaf} (\figref{fig:3:26}) are indeed more spread out in the two-dimensional space, which will facilitate the interpretation. Based on the above, \textit{vanaf} is removed from all data sets.
 
-Before I further analyze a visualization via CA, the degree of representativeness of the plots with respect to the total variation in each of the data sets needs to be assessed. The measure for variation in a frequency table is the inertia \citep{greenacre_correspondence_2007}. The distribution of inertia over the latent dimensions of the CA can be visualized in a so-called scree plot: the bars show how much of the total variation is associated with each dimension. Consequently, the scree plot indicates how many dimensions are needed to reach a threshold, e.g. 80\%. The scree plots for SourceDutch, TransDutch\textsubscript{ENG} and TransDutch\textsubscript{FR}, show that five dimensions are required for SourceDutch (Figures~\ref{fig:3:20} and~\ref{fig:3:21}), three dimensions for TransDutch\textsubscript{ENG} (Figures~\ref{fig:3:22} and~\ref{fig:3:23}) and four dimensions for TransDutch\textsubscript{FR} (Figures~\ref{fig:3:24} and~\ref{fig:3:25}) in order to represent 80\% of the total variation visually. This presents a practical problem, however, as 4- or 5-dimensional plots are not easily visualized. Although a visualization via CA for SourceDutch only represents around 40\% of the inertia, the visualization in \figref{fig:3:26} is presented as a first, exploratory analysis of the field of SourceDutch.
+Before I further analyze a visualization via CA, the degree of representativeness of the plots with respect to the total variation in each of the data sets needs to be assessed. The measure for variation in a frequency table is the inertia \citep{greenacre_correspondence_2007}. The distribution of inertia over the latent dimensions of the CA can be visualized in a so-called scree plot: the bars show how much of the total variation is associated with each dimension. Consequently, the scree plot indicates how many dimensions are needed to reach a threshold, e.g. 80\%. The scree plots for SourceDutch, TransDutch\textsubscript{ENG} and TransDutch\textsubscript{FR}, show that five dimensions are required for SourceDutch (Figure~\ref{fig:3:20}), three dimensions for TransDutch\textsubscript{ENG} (Figure~\ref{fig:3:22}) and four dimensions for TransDutch\textsubscript{FR} (Figure~\ref{fig:3:24}) in order to represent 80\% of the total variation visually. This presents a practical problem, however, as 4- or 5-dimensional plots are not easily visualized. Although a visualization via CA for SourceDutch only represents around 40\% of the inertia, the visualization in \figref{fig:3:26} is presented as a first, exploratory analysis of the field of SourceDutch.
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img20.png}
-\caption{\label{fig:3:20}Scree plot for SourceDutch}
+\includegraphics[width=.48\textwidth]{figures/Vandevoorde2-img20.png}\hfill%
+\includegraphics[width=.48\textwidth]{figures/Vandevoorde2-img21.png}
+\caption{Left: \label{fig:3:20}Scree plot for SourceDutch. Right: \label{fig:3:21}Cumulative scree plot for SourceDutch.}
 \end{figure}
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img21.png}
-\caption{\label{fig:3:21}Cumulative scree plot for SourceDutch}
+\includegraphics[width=.48\textwidth]{figures/Vandevoorde2-img22.png}\hfill%
+\includegraphics[width=.48\textwidth]{figures/Vandevoorde2-img23.png}
+\caption{Left: \label{fig:3:22}Scree plot for TransDutch\textsubscript{ENG}. Right: \label{fig:3:23}Cumulative scree plot TransDutch\textsubscript{ENG}}
 \end{figure}
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img22.png}
-\caption{\label{fig:3:22}Scree plot for TransDutch\textsubscript{ENG}}
+\includegraphics[width=.48\textwidth]{figures/Vandevoorde2-img24.png}\hfill%
+\includegraphics[width=.48\textwidth]{figures/Vandevoorde2-img25.png}
+\caption{Left: \label{fig:3:24}Scree plot for TransDutch\textsubscript{FR}. Right: \label{fig:3:25}Cumulative scree plot for TransDutch\textsubscript{FR}.}
 \end{figure}
-
-\begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img23.png}
-\caption{\label{fig:3:23}Cumulative scree plot TransDutch\textsubscript{ENG}}
-\end{figure}
-
-\begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img24.png}
-\caption{\label{fig:3:24}Scree plot for TransDutch\textsubscript{FR}}
-\end{figure}
-
-\begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img25.png}
-\caption{\label{fig:3:25}Cumulative scree plot for TransDutch\textsubscript{FR}}
-\end{figure} 
 
 \begin{figure}
 \includegraphics[width=7cm]{figures/Vandevoorde2-img26.png}
@@ -890,20 +878,19 @@ Which cluster algorithm is the ``right'' one for this purpose, is not a trivial 
 
 The single-linkage method is discarded because of its tendency to produce a chaining effect. For the other cluster algorithms, however, it is not so clear which method is preferable. From the previous descriptions, Ward’s Method seems to suit my needs best: it can yield small clusters – as a “side-effect of its mathematical properties” – and it reflects a prototype-based view on clusters. The choice of Ward’s Minimum Variance method is also what results from the comparison with the complete and average-linkage methods in \sectref{sec:3.7.2.4}. HAC is carried out on the output of the CA with the function \texttt{pvclust()} from the package \texttt{pvclust} which relies on the function \texttt{hclust()} (the choice of \texttt{pvclust} will be substantiated in the next section).
 
-\subsubsection{Number of clusters}
-\label{sec:3.7.2.3} 
-An important issue of HAC concerns the choice of the number of clusters, i.e. the ``optimal cluster solution''. This is obtained by ``cutting'' the tree at a particular height into n clusters. The height of the tree cut must be chosen carefully, as the resulting clusters will be considered as meaningful and informative in the subsequent interpretation. There is, however, no straightforward procedure to determine the ``best cut''. As a rule of thumb, several scholars suggest that looking at the length of the vertical lines in the dendrogram is indicative for the ``optimal cluster solution''. Gries mentions that “large vertical lines indicate more autonomous subclusters” (\citeyear[338]{gries_statistics_2013}). Similarly, \citet[430]{glynn_cluster_2014} propose to “look at the height bar and choose a place where the cluster structure remains stable for a long distance”. Finally, \citet[95]{everitt_cluster_2011} assert that “large changes in fusion levels are taken to indicate the best cut”. Divjak \& Fieller admit that such suggestions are not exactly what we would call “frivolous” (\citeyear[430]{glynn_cluster_2014}). To somewhat remedy this, they mention three criteria which can help to make a decision on the cut height. According to \citet[432--433]{glynn_cluster_2014}, a ``good'' cut height should give (i) enough clusters in the solution for it to be meaningful (i.e. an acceptable size); (ii) an immediately intuited meaning for each\slash most of the clusters and (iii) criterion validity (the expected level of association between rows and columns should be acceptably reflected). \citet[432--433]{glynn_cluster_2014} furthermore propose two ways to investigate the robustness of a cluster solution: the computation of the average silhouette width and the use of bootstrap validation.
+\subsubsection{Number of clusters}\label{sec:3.7.2.3}\largerpage
+An important issue of HAC concerns the choice of the number of clusters, i.e. the ``optimal cluster solution''. This is obtained by ``cutting'' the tree at a particular height into $n$ clusters. The height of the tree cut must be chosen carefully, as the resulting clusters will be considered as meaningful and informative in the subsequent interpretation. There is, however, no straightforward procedure to determine the ``best cut''. As a rule of thumb, several scholars suggest that looking at the length of the vertical lines in the dendrogram is indicative for the ``optimal cluster solution''. Gries mentions that “large vertical lines indicate more autonomous subclusters” (\citeyear[338]{gries_statistics_2013}). Similarly, \citet[430]{glynn_cluster_2014} propose to “look at the height bar and choose a place where the cluster structure remains stable for a long distance”. Finally, \citet[95]{everitt_cluster_2011} assert that “large changes in fusion levels are taken to indicate the best cut”. Divjak \& Fieller admit that such suggestions are not exactly what we would call “frivolous” (\citeyear[430]{glynn_cluster_2014}). To somewhat remedy this, they mention three criteria which can help to make a decision on the cut height. According to \citet[432--433]{glynn_cluster_2014}, a ``good'' cut height should give (i) enough clusters in the solution for it to be meaningful (i.e. an acceptable size); (ii) an immediately intuited meaning for each\slash most of the clusters and (iii) criterion validity (the expected level of association between rows and columns should be acceptably reflected). \citet[432--433]{glynn_cluster_2014} furthermore propose two ways to investigate the robustness of a cluster solution: the computation of the average silhouette width and the use of bootstrap validation.
 
-The optimal cluster solution will be determined by means of a bootstrap validation technique (I will use average silhouette width as a cluster validation technique, as explained further on in this section). Bootstrapping entails that the data are resampled (with replacement) a high number of times (usually 3000) in order to see how many times the same points are clustered together again. On the basis of these replications a p-value is computed for each node of the dendogram (i.e. the place where two branches join). As a consequence, the bootstrap p-values represent a measure of quality for each node. This bootstrap validation will be done with the R package \texttt{pvclust} \citep{suzuki_pvclust:_2006}. As a matter of fact, the \texttt{pvclust} package provides both an “approximately unbiased p-value” and a “bootstrap probability” (the use of the former is recommended by Suzuki \& Shimodaira). In addition, the package has the function \texttt{pvrect()} which can be used to cut the dendrogram at the nodes above a certain confidence level, e.g. 95\%. This has a clear advantage over tree cuts at a fixed height. Fixed-height cuts are common in HAC but not indispensable. \citeauthor{everitt_cluster_2011} warn that fixed-height cut methods require pre-established cut heights and minimum cluster size which can possibly be influenced by a priori expectations (\citeyear[95]{everitt_cluster_2011}).
+The optimal cluster solution will be determined by means of a bootstrap validation technique (I will use average silhouette width as a cluster validation technique, as explained further on in this section). Bootstrapping entails that the data are resampled (with replacement) a high number of times (usually 3000) in order to see how many times the same points are clustered together again. On the basis of these replications a $p$-value is computed for each node of the dendogram (i.e. the place where two branches join). As a consequence, the bootstrap $p$-values represent a measure of quality for each node. This bootstrap validation will be done with the R package \texttt{pvclust} \citep{suzuki_pvclust:_2006}. As a matter of fact, the \texttt{pvclust} package provides both an “approximately unbiased $p$-value” and a “bootstrap probability” (the use of the former is recommended by Suzuki \& Shimodaira). In addition, the package has the function \texttt{pvrect()} which can be used to cut the dendrogram at the nodes above a certain confidence level, e.g. 95\%. This has a clear advantage over tree cuts at a fixed height. Fixed-height cuts are common in HAC but not indispensable. \citeauthor{everitt_cluster_2011} warn that fixed-height cut methods require pre-established cut heights and minimum cluster size which can possibly be influenced by a priori expectations (\citeyear[95]{everitt_cluster_2011}).
 
-If possible, I will always cut the tree at the highest significant node attaining a confidence level of 95\%. However, this procedure runs the risk of excluding many-cluster-solutions: e.g. if the two highest nodes in a tree are significant, \texttt{pvrect()} would choose a two-cluster-solution. Such solutions with very few clusters might be less interpretable than  many-cluster-solutions. As a consequence, I propose a compromise of cutting a dendrogram at a confidence level and cutting it at a fixed height: the cutoff point will be chosen so that for each cluster in the solution, the highest node within each cluster is significant (the Approximately Unbiased p-value should be $\geq 0.95$; an exception is made for singleton clusters). In this way the validated cluster solution meets the first two criteria mentioned by \citeauthor{glynn_cluster_2014} for good cut height (acceptable cluster size and meaningful clusters).
+If possible, I will always cut the tree at the highest significant node attaining a confidence level of 95\%. However, this procedure runs the risk of excluding many-cluster-solutions: e.g. if the two highest nodes in a tree are significant, \texttt{pvrect()} would choose a two-cluster-solution. Such solutions with very few clusters might be less interpretable than  many-cluster-solutions. As a consequence, I propose a compromise of cutting a dendrogram at a confidence level and cutting it at a fixed height: the cutoff point will be chosen so that for each cluster in the solution, the highest node within each cluster is significant (the Approximately Unbiased $p$-value should be $\geq 0.95$; an exception is made for singleton clusters). In this way the validated cluster solution meets the first two criteria mentioned by \citeauthor{glynn_cluster_2014} for good cut height (acceptable cluster size and meaningful clusters).
 
 \subsubsection{Validation of the number of clusters}\label{sec:3.7.2.4}
-In \sectref{sec:3.7.2.3} bootstrap p-values were proposed to determine the number of clusters. That procedure is now complemented with two techniques for testing the validity of a cluster solution. The first validation consists in the computation of the average silhouette widths proposed by \citet{kaufman_finding_1990}, the second one is a (non-hierarchical) $k$-means clustering.
+In \sectref{sec:3.7.2.3} bootstrap $p$-values were proposed to determine the number of clusters. That procedure is now complemented with two techniques for testing the validity of a cluster solution. The first validation consists in the computation of the average silhouette widths proposed by \citet{kaufman_finding_1990}, the second one is a (non-hierarchical) $k$-means clustering.
 
-\citet{kaufman_finding_1990} propose to calculate the silhouette width for each object in a cluster solution and summarize this information in a silhouette plot. For each object i, one can “compare i’s separation from its cluster against the heterogeneity of the cluster” \citep[138]{everitt_cluster_2011}. The silhouette width has a value situated between \textminus1 and 1. Values close to 1 imply that “the heterogeneity of object i’s cluster is much smaller than its separation and object i is taken as ``well classified''” \citep[128]{everitt_cluster_2011}; values close to \textminus1 imply misclassification and values around 0 suggest that the classification is unclear \citep[128]{everitt_cluster_2011}. Finally, the average silhouette width – the average of all silhouette widths of a set of data – can be used to validate the chosen cluster solution. \citet{kaufman_finding_1990} point out that an average silhouette width above 0.5 indicates a good classification, whereas values beneath 0.2 betray an unclear classification. In addition, \citet[129]{everitt_cluster_2011} suggest using the average silhouette widths as an instrument for optimizing the number of clusters. The average silhouette width can be calculated using the \texttt{pam()} function of the cluster{}-package.
+\citet{kaufman_finding_1990} propose to calculate the silhouette width for each object in a cluster solution and summarize this information in a silhouette plot. For each object $i$, one can “compare $i$’s separation from its cluster against the heterogeneity of the cluster” \citep[138]{everitt_cluster_2011}. The silhouette width has a value situated between \textminus1 and 1. Values close to 1 imply that “the heterogeneity of object $i$’s cluster is much smaller than its separation and object $i$ is taken as ``well classified''” \citep[128]{everitt_cluster_2011}; values close to \textminus1 imply misclassification and values around 0 suggest that the classification is unclear \citep[128]{everitt_cluster_2011}. Finally, the average silhouette width – the average of all silhouette widths of a set of data – can be used to validate the chosen cluster solution. \citet{kaufman_finding_1990} point out that an average silhouette width above 0.5 indicates a good classification, whereas values beneath 0.2 betray an unclear classification. In addition, \citet[129]{everitt_cluster_2011} suggest using the average silhouette widths as an instrument for optimizing the number of clusters. The average silhouette width can be calculated using the \texttt{pam()} function of the cluster{}-package.
 
-Although $k$-means clustering can be run as a separate clustering procedure, I will use it as a validation of the HAC. More specifically, I will compute the centers of the clusters from the HAC and feed those into a $k$-means clustering. If the partitioning of the lexemes into clusters remains (largely) the same in the $k$-means clustering, then this can be considered as a validation of the results in the HAC. After calculation of the cluster centroids using \texttt{centers\_ca()} function of \texttt{svs}, $k$-means clustering can be carried out using the \texttt{kmeans()} function. In contrast to HAC, which does not need a pre-determined number of clusters, non-hierarchical clustering methods such as $k$-means clustering require a pre-specified number of clusters. More specifically, $k$-means “defines the clusters by the center of mass of their members” \citep[515]{manning_foundations_1999}, i.e. it takes K points as the centers of the clusters. For the initialization of the $k$-means algorithm, K points can be randomly chosen from the data to serve as seeds, although predetermined centers can also be supplied \citep[515]{manning_foundations_1999}. The algorithm then consists in iteratively assigning each data point to the cluster to the center of which it is closest \citep[515]{manning_foundations_1999} and subsequently recomputing the centers on the basis of the assignments \citep[515--516]{manning_foundations_1999}. This iterative procedure is carried out until convergence, i.e. until there are no further reassignments.
+Although $k$-means clustering can be run as a separate clustering procedure, I will use it as a validation of the HAC. More specifically, I will compute the centers of the clusters from the HAC and feed those into a $k$-means clustering. If the partitioning of the lexemes into clusters remains (largely) the same in the $k$-means clustering, then this can be considered as a validation of the results in the HAC. After calculation of the cluster centroids using \texttt{centers\_ca()} function of \texttt{svs}, $k$-means clustering can be carried out using the \texttt{kmeans()} function. In contrast to HAC, which does not need a pre-determined number of clusters, non-hierarchical clustering methods such as $k$-means clustering require a pre-specified number of clusters. More specifically, $k$-means “defines the clusters by the center of mass of their members” \citep[515]{manning_foundations_1999}, i.e. it takes $k$ points as the centers of the clusters. For the initialization of the $k$-means algorithm, K points can be randomly chosen from the data to serve as seeds, although predetermined centers can also be supplied \citep[515]{manning_foundations_1999}. The algorithm then consists in iteratively assigning each data point to the cluster to the center of which it is closest \citep[515]{manning_foundations_1999} and subsequently recomputing the centers on the basis of the assignments \citep[515--516]{manning_foundations_1999}. This iterative procedure is carried out until convergence, i.e. until there are no further reassignments.
 
 In \sectref{sec:3.7.2}, I substantiated my choice to carry out a HAC on the output of a CA. In addition to this procedure, it is also possible to carry out a HAC directly on the raw data or to compute the distances for the HAC on the output of a Latent Semantic Analysis. LSA is typically considered as a Vector Space Model since “the values of the elements are derived from event frequencies” \citep[144]{turney_frequency_2010} and it is also generally associated with distributional approaches to meaning \citep[141]{turney_frequency_2010}. Conceptually, LSA works as follows:
 
@@ -913,7 +900,7 @@ LSA projects document frequency vectors into a low dimensional space calculated 
 
 LSA can, by virtue of its symmetry, also be applied to word similarity \citep[123]{mehler_models_2007} and consequently also to translational similarity. In this case, the algorithm of LSA (which is usually applied to a document-term matrix) is applied to a source–target language matrix.
 
-In the subsequent comparison, I will include HAC on the raw data and HAC on the output of a LSA. The various combinations of distance measures (Euclidean and Canberra), amalgamation rules (Complete, Average and Ward’s) and spatial maps (raw data, output of CA, output of LSA) are summarized in \tabref{tab:3:13}. Because of the high number of combinatorial possibilities – 18 in total – I only compare the combinations for the data set SourceDutch. I selected three validation criteria which have in common their ability to assess the overall strength of the clustering structure: agglomerative coefficient, chaining effect and p-values.
+In the subsequent comparison, I will include HAC on the raw data and HAC on the output of a LSA. The various combinations of distance measures (Euclidean and Canberra), amalgamation rules (Complete, Average and Ward’s) and spatial maps (raw data, output of CA, output of LSA) are summarized in \tabref{tab:3:13}. Because of the high number of combinatorial possibilities – 18 in total – I only compare the combinations for the data set SourceDutch. I selected three validation criteria which have in common their ability to assess the overall strength of the clustering structure: agglomerative coefficient, chaining effect and $p$-values.
 
 Firstly, the agglomerative coefficient for each combination is calculated. This is a standard measure to describe the strength of a clustering structure.
 
@@ -925,12 +912,12 @@ Since I am using the same data set for each dendrogram in this comparison, the a
 
 Secondly, the output for each combination is visually inspected for presence of chaining effect. For this study, a chaining effect in the cluster structure is disfavored to a sphere-like structure. Hence, the appearance of a chaining effect (as well as of a space-dilation effect) will be considered negative. Because a chaining effect can only be determined on the basis of visual inspection, we introduced four levels of chaining. In \tabref{tab:3:13}, \textit{no} means that no chaining effect was observed, \textit{yes} that a clear chaining effect was observed, \textit{high} means that chaining occurs only in the higher nodes and \textit{low} means that chaining only occurs in the lower nodes. Only those results where a clear chaining effect is observed (\textit{yes}), will be considered negative, no chaining (\textit{no}) will be considered as the most positive outcome.
 
-Finally, the p-values (which were introduced in \sectref{sec:3.7.2.3} to determine the cluster solution) will be used as a third element to assess the overall strength of the clustering structure. To do so, the number of significant nodes (i.e. with a p-value of 0.95 or higher) in the dendrogram will be counted. Each of the dendrograms presented in the comparison counts 14 nodes. If $\geq 7$ nodes in the dendrogram are significant, this will be considered as an indication of a strong overall clustering structure. The number in the third column of \tabref{tab:3:13} thus indicates the number of significant p-values ($\geq 0.95$) on a total of 14 nodes.
+Finally, the $p$-values (which were introduced in \sectref{sec:3.7.2.3} to determine the cluster solution) will be used as a third element to assess the overall strength of the clustering structure. To do so, the number of significant nodes (i.e. with a $p$-value of 0.95 or higher) in the dendrogram will be counted. Each of the dendrograms presented in the comparison counts 14 nodes. If $\geq 7$ nodes in the dendrogram are significant, this will be considered as an indication of a strong overall clustering structure. The number in the third column of \tabref{tab:3:13} thus indicates the number of significant $p$-values ($\geq 0.95$) on a total of 14 nodes.
 
 \begin{table}\caption{Combinatory possibilities of the selected distance measures, clustering algorithms and ``spatial maps''. \textsuperscript{†}: (+ high space dilation)\label{tab:3:13}}
 \begin{tabular}{llrlr} 
 \lsptoprule
-&  Procedural combination &  Agglomerative & {Chaining}  & {p-values}\\
+&  Procedural combination &  Agglomerative & {Chaining}  & {$p$-values}\\
 &                         &  coefficient   & {effect} \\\midrule
 1 & Euclidean, Average          & 0.72 & YES & 10\\
 2 & Euclidean, Average, on CA   & 0.74 & YES & 10\\
@@ -958,118 +945,73 @@ Finally, the p-values (which were introduced in \sectref{sec:3.7.2.3} to determi
 
 Six out of nine combinations with Euclidean distance show a clear chaining effect (combinations 1, 2, 3, 4, 5 and 7). Combination 6 displays chaining on the higher edges of the dendrogram. Only combinations 8 and 9 (using Ward’s Minimum Variance Method) do not suffer from chaining. As for the combinations with Canberra distance, none of them displays clear chaining, although combinations 11, 14, 15 and 17 show space-dilation effects on the higher edges as well as chaining-effects on the lower edges. Combination 10 only shows some chaining on the higher edges. Combinations 12, 13, 16 and 18 show no effect of chaining nor space-dilation at all. Chaining and space-dilation effects seem not to be limited to the complete-linkage algorithm but appear irrespective of the clustering algorithm.
 
-For the combinations with Euclidean distance, all but two combinations display a high number of significant p-values (only combinations 6 and 9, carried out on the output of a LSA have less than 7 significant nodes). For the combinations with Canberra distance, only two out of nine combinations have 7 or more significant p-values: combinations 14 and 15, both carried out with the complete-linkage algorithm.
+For the combinations with Euclidean distance, all but two combinations display a high number of significant $p$-values (only combinations 6 and 9, carried out on the output of a LSA have less than 7 significant nodes). For the combinations with Canberra distance, only two out of nine combinations have 7 or more significant $p$-values: combinations 14 and 15, both carried out with the complete-linkage algorithm.
 
 On the basis of the obtained values for each of the criteria in the comparison, it can be concluded that combinations 8 (Euclidean, Wards, on CA), 14 (Canberra, Complete, on CA) and 15 (Canberra, Complete, on LSA) are most likely to yield interpretable results for these data. Preference goes to combination 8, because no chaining was observed at all (in combinations 14 and 15 space-dilation in the high nodes and chaining in the low nodes was observed). In addition, this is the only combination with Ward’s Method, which is a more natural choice when one adheres a prototype-based view on clusters (as was explained in \sectref{sec:3.7.2.2}). On the basis of this comparison, it is decided to apply combination 8 (Euclidean, Wards, on CA) to all data sets of the case study of \textit{beginnen.}
 
-The previous comparison also leads to some more general observations: when Euclidean distance is used, chaining effect, relatively high agglomerative coefficients (although lower than for Canberra) and a high number of significant p-values are more likely to appear. Combining Euclidean distance with Ward’s Method seems to avoid chaining effects. Canberra distance, on the other hand, avoids chaining effect, renders high agglomerative coefficients (except on raw data) but renders a low number of significant p-values. From the point of view of the clustering algorithms, it is noteworthy that combinations with the complete-linkage algorithm usually display a high amount of significant p-values and that combinations with Ward’s Method are usually best at avoiding chaining effect (only combination 7 with Ward’s displays clear chaining). When the different spatial maps are taken as point of departure, it appears that analyses on the raw data render low agglomerative coefficients and that analyses on the CA are prone to chaining.\todo[inline]{Need to optimise page break here}
+The previous comparison also leads to some more general observations: when Euclidean distance is used, chaining effect, relatively high agglomerative coefficients (although lower than for Canberra) and a high number of significant $p$-values are more likely to appear. Combining Euclidean distance with Ward’s Method seems to avoid chaining effects. Canberra distance, on the other hand, avoids chaining effect, renders high agglomerative coefficients (except on raw data) but renders a low number of significant $p$-values. From the point of view of the clustering algorithms, it is noteworthy that combinations with the complete-linkage algorithm usually display a high amount of significant $p$-values and that combinations with Ward’s Method are usually best at avoiding chaining effect (only combination 7 with Ward’s displays clear chaining). When the different spatial maps are taken as point of departure, it appears that analyses on the raw data render low agglomerative coefficients and that analyses on the CA are prone to chaining.
 
 \begin{figure}
 % \includegraphics[height=.3\textheight]{figures/Vandevoorde2-img30.png}
-\includegraphics[height=.4\textheight]{figures/tree30.pdf}
-\caption{\label{fig:3:30} Euclidean, Average (1)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img31.png}
-\includegraphics[height=.4\textheight]{figures/tree31.pdf}
-\caption{\label{fig:3:31}  Euclidean, Average, on CA (2)}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree30.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree31.pdf}
+\caption{\label{fig:3:30}Left: Euclidean, Average (1). Right:\label{fig:3:31} Euclidean, Average, on CA (2).}
 \end{figure}
 
 \begin{figure}
 % \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img32.png}
-\includegraphics[height=.4\textheight]{figures/tree32.pdf}
-\caption{\label{fig:3:32}  Euclidean, Average, on LSA (3)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img33.png}
-\includegraphics[height=.4\textheight]{figures/tree33.pdf}
-\caption{\label{fig:3:33}  Euclidean, Complete (4)}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree32.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree33.pdf}
+\caption{Left:\label{fig:3:32} Euclidean, Average, on LSA (3). Right:\label{fig:3:33}  Euclidean, Complete (4).}
 \end{figure}
 
 \begin{figure}
 % \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img34.png}
-\includegraphics[height=.4\textheight]{figures/tree34.pdf}
-\caption{\label{fig:3:34}  Euclidean, Complete, on CA (5)}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree34.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree35.pdf}
+\caption{\label{fig:3:34}Left: Euclidean, Complete, on CA (5).\label{fig:3:35}Right: Euclidean, Complete, on LSA (6).}
 \end{figure}
 
 \begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img35.png}
-\includegraphics[height=.4\textheight]{figures/tree35.pdf}
-\caption{\label{fig:3:35}  Euclidean, Complete, on LSA (6)}
+% \includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/Vandevoorde2-img36.png}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree36.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree37.pdf}
+\caption{\label{fig:3:36}Left: Euclidean, Ward’s (7). Right:\label{fig:3:37} Euclidean, Ward’s, on CA (8).}
 \end{figure}
 
 \begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img36.png}
-\includegraphics[height=.4\textheight]{figures/tree36.pdf}
-\caption{\label{fig:3:36}  Euclidean, Ward’s (7)}
+% \includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/Vandevoorde2-img38.png}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree38.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree39.pdf}
+\caption{\label{fig:3:38}Left: Euclidean, Ward’s, on LSA (9).\label{fig:3:39}Right: Canberra, Average (10).}
 \end{figure}
 
 \begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img37.png}
-\includegraphics[height=.4\textheight]{figures/tree37.pdf}
-\caption{\label{fig:3:37}  Euclidean, Ward’s, on CA (8)}
+% \includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/Vandevoorde2-img40.png}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree40.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree41.pdf}
+\caption{\label{fig:3:40}Left:  Canberra, Average, on CA (11). Right:\label{fig:3:41} Canberra, Average, on LSA (12).}
 \end{figure}
 
 \begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img38.png}
-\includegraphics[height=.4\textheight]{figures/tree38.pdf}
-\caption{\label{fig:3:38}  Euclidean, Ward’s, on LSA (9)}
+% \includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/Vandevoorde2-img42.png}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree42.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree43.pdf}
+\caption{Left:\label{fig:3:42} Canberra, Complete (13).\label{fig:3:43}Right: Canberra, Complete, on CA (14).}
 \end{figure}
 
 \begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img39.png}
-\includegraphics[height=.4\textheight]{figures/tree39.pdf}
-\caption{\label{fig:3:39}  Canberra, Average (10)}
+% \includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/Vandevoorde2-img44.png}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree44.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree45.pdf}
+\caption{\label{fig:3:44}Left: Canberra, Complete, on LSA (15). Right:\label{fig:3:45} Canberra, Ward’s (16).}
 \end{figure}
 
 \begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img40.png}
-\includegraphics[height=.4\textheight]{figures/tree40.pdf}
-\caption{\label{fig:3:40}  Canberra, Average, on CA (11)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img41.png}
-\includegraphics[height=.4\textheight]{figures/tree41.pdf}
-\caption{\label{fig:3:41}  Canberra, Average, on LSA (12)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img42.png}
-\includegraphics[height=.4\textheight]{figures/tree42.pdf}
-\caption{\label{fig:3:42}  Canberra, Complete (13)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img43.png}
-\includegraphics[height=.4\textheight]{figures/tree43.pdf}
-\caption{\label{fig:3:43}  Canberra, Complete, on CA (14)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img44.png}
-\includegraphics[height=.4\textheight]{figures/tree44.pdf}
-\caption{\label{fig:3:44}  Canberra, Complete, on LSA (15)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img45.png}
-\includegraphics[height=.4\textheight]{figures/tree45.pdf}
-\caption{\label{fig:3:45}  Canberra, Ward’s (16)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img46.png}
-\includegraphics[height=.4\textheight]{figures/tree46.pdf}
-\caption{\label{fig:3:46}  Canberra, Ward’s, on CA (17)}
-\end{figure}
-
-\begin{figure}
-% \includegraphics[height=.4\textheight]{figures/Vandevoorde2-img47.png}
-\includegraphics[height=.4\textheight]{figures/tree47.pdf}
-\caption{\label{fig:3:47}  Canberra, Ward’s, on LSA (18)}
+% \includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/Vandevoorde2-img46.png}
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree46.pdf}\hfill%
+\includegraphics[width=.48\textwidth,trim=95 40 75 75]{figures/tree47.pdf}
+\caption{\label{fig:3:46}Left: Canberra, Ward’s, on CA (17). Right:\label{fig:3:47} Canberra, Ward’s, on LSA (18).}
 \end{figure}
 
 \clearpage
