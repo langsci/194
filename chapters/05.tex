@@ -91,8 +91,35 @@ Paradis combines three hypotheses into one theory. The “Three-Store Hypothesis
 This hypothesis is combined with the so-called “Subsystems Hypothesis”, which claims that each (language) is an independent neurofunctional subsystem, consisting of its own, independent phonology, morphology, syntax, semantics and lexicon. Each language subsystem is connected (independently of the other language subsystems) to the single conceptual system. Within the conceptual system, conceptual features are then grouped together “in accordance with the specific lexical semantic constraints of words in each language and the relevant pragmatic circumstances at the time of their use” \citep[3]{kecskes_neurofunctional_2007}. In other words, the specific language constraints of the language subsystem will, together with the pragmatic context determine how the conceptual features will be grouped. \figref{fig:5:91} schematically summarizes the components of the verbal communication system (which incorporates the two hypotheses above) consisting of one non-linguistic (language independent) conceptual level common for all languages and four independent (but language-dependent) subsystems: (i) implicit linguistic competence – containing semantics, morphosyntax and phonology, (ii) explicit metalinguistic knowledge (iii) pragmatic ability and (iv) motivation\slash affect \citep[3]{paradis_neurolinguistic_2004, kecskes_neurofunctional_2007}.
 
 \begin{figure}
-\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img94.png}
-\caption{\label{fig:5:91}  Schematic representation of the components of verbal communication (copied from \citealt[227]{paradis_neurolinguistic_2004})}
+\includegraphics[height=.3\textheight]{figures/Vandevoorde2-img94.png}\\
+\begin{tikzpicture}
+\matrix (verbcom) [matrix of nodes,nodes in empty cells,font=\sffamily,nodes={text width=2.25cm,align=center,inner ysep=3.5mm,inner xsep=2mm},column sep=0pt] 
+  {
+    & Metalinguistic knowledge of L1  & Metalinguistic knowledge of L2 & \\
+   \vphantom{Cp} & \phantom{Concept} & \phantom{System}  & \vphantom{Cp} \\
+    & Semantics L1 & Semantics L2 & \\
+    & Morphosyntax L1 & Morphosyntax L2 & \\
+    & Phonology L1 & Phonology L2 & \\
+  };
+  \draw (verbcom-1-2.north west) -- (verbcom-1-3.north east)
+                                 -- (verbcom-5-3.south east)
+                                 -- (verbcom-5-2.south west)
+                                 -- cycle;
+  \draw (verbcom-1-2.north east) |- (verbcom-2-4.north east)
+                                 |- (verbcom-5-3.south east);
+  \draw (verbcom-1-2.north east) |- (verbcom-2-1.north west)
+                                 |- (verbcom-5-2.south west);
+  \foreach \i in {3,4,5} \draw (verbcom-\i-2.north west) -- (verbcom-\i-3.north east);
+  \draw (verbcom-3-2.north east) -- (verbcom-5-2.south east);
+  \node [fit=(verbcom-2-2) (verbcom-2-3),inner ysep=3.5mm,yshift=-.25\baselineskip] (system) {\sffamily\bfseries Conceptual system};
+  \node [fit=(verbcom-2-1) (verbcom-5-1),align=center] {\sffamily L1 Pragmatics};
+  \node [fit=(verbcom-2-4) (verbcom-5-4),align=center] {\sffamily L2 Pragmatics};
+  \node [above right=1cm of system,circle,inner sep=0pt,draw,text width=1.75cm,align=center] (epis) {\sffamily\small Episodic memory,\linebreak encyclopaedic knowledge};
+  \draw (epis) -- (verbcom-1-3.south east);
+  \node [above left=1cm of system,circle,inner sep=0pt,draw,text width=1.75cm,align=center] (sens) {\sffamily\small Sensory perceptions, feelings};
+  \draw (sens) -- (verbcom-1-2.south west);
+\end{tikzpicture}
+\caption{\label{fig:5:91}Schematic representation of the components of verbal communication (based on \citealt[227]{paradis_neurolinguistic_2004})}
 \end{figure}
 
 The selection of the appropriate conceptual features is driven by lexical meaning \citep[203]{paradis_neurolinguistic_2004}, implying that when a speaker hears a word, the appropriate lexical item is immediately selected. The fact that the speaker is a unilingual or a bilingual does not change anything to the fact that each word is “directly perceived as a word and its meaning” \citep[203]{paradis_neurolinguistic_2004} (the fact that the bilingual perceives that the word is an English or a French word is of no importance to access the lexical item since such knowledge is metalinguistic in nature). This idea is captured as the “Direct Access Hypothesis”, which is also compatible with the previous two hypotheses (the idea of Direct Access can be combined with the idea that the verbal communication system consists of one non-linguistic conceptual level and four independent, but language-dependent subsystems). According to the Direct Access Hypothesis “[l]exical access is language nonselective but sensitive to language-specific characteristics of the input” \citep[205]{paradis_neurolinguistic_2004}. In other words, the lexical item that will be accessed will be the one corresponding to the perceived lexical item in the particular input language, but the language as such does not influence the accessing of the lexical item. This means that bilinguals use the available information (phonological if spoken or orthographic if written) provided by a lexical item to access the item in the according subsystem, not the meta-linguistic knowledge about which language the word pertains to.
