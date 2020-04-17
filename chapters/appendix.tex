@@ -322,10 +322,10 @@ dotchart(DIS[[...]],xlim=c(0,max(DIS[[...]])),bg="...",main="...",xlab="...")
 CSP <- fast_mca(DAT)
 \end{lstlisting}
 
-\chapter{Distances of lexemes}\label{ch:C}\todo[inline]{Please check tables and correct captions!}
-\begin{table}\scriptsize
+\chapter{Distances of lexemes}\label{ch:C}
+\vfill\begin{table}\scriptsize
 \caption{Distances of lexemes to centroids for SourceDutch\label{appendix-table-H}}
-\begin{tabularx}{\textwidth}{>{\itshape}X *{5}{S[table-format=1.8]} S[table-format=1.8e+1,table-align-exponent = false]}
+\begin{tabularx}{\textwidth}{>{\itshape}X *{5}{S[table-format=1.7]} S[table-format=1.6e+1,table-align-exponent = false]}
 \lsptoprule
 \normalfont Lexeme        & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6}\\ \midrule
 aanvang       & 3.46413967 & 0.55330205 & 1.6594735 & 3.2985467 & 3.4994764 & 3.418562 \\
@@ -341,16 +341,16 @@ oprichten     & 0.02952887 & 3.63757265 & 3.2631613 & 4.1998850 & 4.3949576 & 4.
 opstarten     & 2.75535998 & 2.25815302 & 0.5508145 & 3.1747593 & 3.2705318 & 3.356807 \\
 opzetten      & 0.06749455 & 3.70027235 & 3.3478383 & 4.2210725 & 4.4466206 & 4.430260 \\       
 start         & 3.58117345 & 0.20740218 & 2.0028870 & 3.4319375 & 3.7221581 & 3.549602 \\ 
-starten van   & 3.19549285 & 2.23275009 & 0.1264550 & 3.1248429 & 3.3679560 & 3.293686 \\
-start gaan    & 3.06686816 & 2.12361039 & 0.2694401 & 3.0678892 & 3.2158486 & 3.300870 \\
+starten   & 3.19549285 & 2.23275009 & 0.1264550 & 3.1248429 & 3.3679560 & 3.293686 \\
+van start gaan    & 3.06686816 & 2.12361039 & 0.2694401 & 3.0678892 & 3.2158486 & 3.300870 \\
 worden        & 3.55533903 & 2.48650607 & 1.1834631 & 3.4027884 & 2.1810695 & 3.467892 \\
 \lspbottomrule
 \end{tabularx}
-\end{table}
+\end{table}\vfill\pagebreak
 
 \begin{table}\scriptsize
 \caption{Distances of lexemes to centroids for TransDutch\textsubscript{ENG}\label{appendix-table-I}}
-\begin{tabularx}{\textwidth}{>{\itshape}X *{5}{S[table-format=1.8]} S[table-format=1.8e+1,table-align-exponent = false]}
+\begin{tabularx}{\textwidth}{>{\itshape}X *{5}{S[table-format=1.7]} S[table-format=1.6e+1,table-align-exponent = false]}
 \lsptoprule
 \normalfont Lexeme        & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6}\\ \midrule
 aanvang       & 4.1772428 & 0.6167167 & 2.25776243 & 1.9830519 & 3.4640847 & 2.201321 \\
@@ -366,8 +366,8 @@ oprichten     & 0.2004520 & 4.3190150 & 3.51758612 & 2.5663876 & 4.2131591 & 4.1
 opstarten     & 2.5129762 & 2.3375610 & 1.53758445 & 0.4202192 & 2.8121934 & 2.554513 \\  
 opzetten      & 0.2476172 & 4.6485414 & 3.84721417 & 2.8859388 & 4.3223569 & 4.394258 \\       
 start         & 4.5318886 & 0.1284827 & 2.96275365 & 2.5973465 & 3.8828659 & 2.310246 \\ 
-starten van   & 3.7323929 & 2.7788342 & 0.25003812 & 1.2945116 & 2.9107599 & 2.678813 \\
-start gaan    & 3.6994104 & 2.7788342 & 0.37259612 & 1.2033103 & 2.8650225 & 2.266192 \\
+starten   & 3.7323929 & 2.7788342 & 0.25003812 & 1.2945116 & 2.9107599 & 2.678813 \\
+van start gaan    & 3.6994104 & 2.7788342 & 0.37259612 & 1.2033103 & 2.8650225 & 2.266192 \\
 worden        & 3.7258800 & 2.8383236 & 0.12738579 & 1.3202771 & 2.9009154 & 2.624651 \\
 \lspbottomrule
 \end{tabularx}
@@ -391,8 +391,8 @@ oprichten     & 2.72209090 & 3.5496501 & 0.2037736 & 1.6826330 \\
 opstarten     & 2.78419901 & 3.6195418 & 0.2664611 & 1.7438098 \\  
 opzetten      & 2.84781317 & 3.6528091 & 0.4267752 & 1.8862396 \\       
 start         & 0.54160901 & 3.7768222 & 2.1561010 & 2.0667548 \\ 
-starten van   & 2.65295171 & 3.5682872 & 0.1160007 & 1.4000293 \\
-start gaan    & 2.60959733 & 3.5784474 & 0.4316780 & 1.2147151 \\
+starten       & 2.65295171 & 3.5682872 & 0.1160007 & 1.4000293 \\
+van start gaan    & 2.60959733 & 3.5784474 & 0.4316780 & 1.2147151 \\
 worden        & 2.61519730 & 3.5894073 & 1.2349533 & 0.9202239 \\
 \lspbottomrule
 \end{tabularx}
