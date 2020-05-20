@@ -1,7 +1,1 @@
-{"versions": [{"versiontype": "proofreading",
-		"title": "Semantic differences in translation",
-		"authors": [{"name": "Lore Vandevoorde"}],
-	"license": "CC-BY-4.0",
-	"publishedAt": "2018-10-29T15:00:38.000Z"}
-	]
-}
+{"versions": [{"title": "Semantic differences in translation", "versiontype": "proofreading", "license": "CC-BY-4.0", "publishedAt": "2018-10-29T15:00:38.000Z", "authors": [{"name": "Lore Vandevoorde"}]}, {"authors": [{"name": "Lore Vandevoorde"}], "versiontype": "first_edition", "publishedAt": "2020-05-20T12:53:12.599022", "license": "CC-BY-4.0", "title": "Semantic differences in translation"}, {"title": "Semantic differences in translation", "versiontype": "first_edition", "license": "CC-BY-4.0", "publishedAt": "2020-05-20T12:56:12.622937", "authors": [{"name": "Lore Vandevoorde"}]}]}
